@@ -5,23 +5,23 @@ This page details my web-components
 ## Web Components
 
 ### Calculator
-[Calculator](https://plosty/learning-web-components.github.io/calculator/calculator.html)
+[Calculator](https://plosty.github.io/learning-web-components/calculator/calculator.html)
 
 [Calculator Code](/calculator) - Repo for the Calculator project
 
 ### Accordion
-[Accordion](https://plosty/learning-web-components.github.io/accordion/accordion.html)
+[Accordion](https://plosty.github.io/learning-web-components/accordion/accordion.html)
 
 [Accordion Code](/accordian) - Repo for the Accordion project
 
 ### HTML5 Forms
-[Signup](https://plosty/learning-web-components.github.io/forms/signup.html) 
+[Signup](https://plosty.github.io/learning-web-components/forms/signup.html) 
 
-[Shipping & Billing](https://plosty/learning-web-components.github.io/forms/shipping-billing.html)
+[Shipping & Billing](https://plosty.github.io/learning-web-components/forms/shipping-billing.html)
 
-[Payment](https://plosty/learning-web-components.github.io/forms/payment.html)
+[Payment](https://plosty.github.io/learning-web-components/forms/payment.html)
 
-[Scheduling]https://plosty/learning-web-components.github.io/forms/scheduling.html)
+[Scheduling](https://plosty.github.io/learning-web-components/forms/scheduling.html)
 
 [Forms Code](/forms) - Repo for the Forms projects listed above
 
