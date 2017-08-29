@@ -1,0 +1,61 @@
+body{
+  background-color: whitesmoke;
+}
+* {
+  box-sizing: border-box;
+}
+.calc-frame {
+  overflow: hidden;
+  border: 0px solid blue;
+  width: 350px;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 40px;
+  color: rgb(232, 244, 53);
+}
+.calc-functionality {
+}
+.display {
+  text-align: right;
+  width: 100%;
+  background-color: rgb(4, 109, 107);
+  color: rgb(232, 244, 53);
+  font-family: inherit;
+  font-size: inherit;
+  border: 1px solid #52518B;
+  height: 65px;
+}
+.button-panel {
+  border: 1px solid blue;
+}
+.button-row {
+  overflow: hidden;
+}
+input[type=button] {
+  border: 1px solid rgb(76, 239, 236);
+  height: 75px;
+}
+.calc-button {
+  background-color: rgb(5, 175, 172);
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  width: 25%;
+  float: left;
+}
+.calc-button:active {
+  background-color: rgb(58, 185, 244);
+}
+.calc-double-button {
+  width: 50%;
+}
+.calc-operation-button {
+  background-color: rgb(58, 185, 244);
+  font-family: inherit;
+  font-size: inherit;
+  color: rgb(232, 244, 53);
+  width: 25%;
+  float: left;
+}
+.calc-operation-button:active {
+  background-color: rgb(5, 175, 172);
+}
