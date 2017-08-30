@@ -2,16 +2,14 @@
 <head>
   <link rel="stylesheet" type="text/css" href="accordion.css" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <title>accordian</title>
+  <title>accordion</title>
 </head>
 <body>
-  <div class="accordion">
-    <ul>
+  <ul class="ac-container">
       <!-- Item 1 -->
-      <li>
-        <input type="checkbox" checked>
-        <i></i>
-        <h1>APPETIZERS</h1>
+      <li class="ac-menu-section">
+        <input id="ac-1" name="accordion-1" type="radio" checked>
+        <label for="ac-1">APPETIZERS</label>
         <div class="content">
           <h2>Check out our tasty apps!</h2>
           <h3>Happy hour menu - half off!!</h3>
@@ -29,10 +27,9 @@
         </div>
       </li>
       <!-- Item 2 -->
-      <li>
-        <input type="checkbox" checked>
-        <i></i>
-        <h1>ENTREES</h1>
+      <li class="ac-menu-section">
+        <input id="ac-2" name="accordion-1" type="radio">
+        <label for="ac-2">ENTREES</label>
         <div class="content">
           <h2>Choose from a wide range of pastas, combos and signature dishes</h2>
           <h3>Pastas</h3>
@@ -52,17 +49,16 @@
             <li class="menu-item">
               Italian Sausage & Beef Combo - 15.99$
             </li>
-            <li>
+            <li class="menu-item">
               Mac n Cheese with Chicken Tenders - 8.99$
             </li class="menu-item">
           </ul>
         </div>
       </li>
       <!-- Item 3 -->
-      <li>
-        <input type="checkbox" checked>
-        <i></i>
-        <h1>DESSERTS</h1>
+      <li class="ac-menu-section">
+        <input id="ac-3" name="accordion-1" type="radio">
+        <label for="ac-3">DESSERTS</label>
         <div class="content">
           <h2>New Summer specials!</h2>
           <h3>Shakes and Ice Creams</h3>
@@ -78,5 +74,4 @@
       </li>
       <!-- Placeholder for Item 4 -->
     </ul>
-  </div>
 </body>
