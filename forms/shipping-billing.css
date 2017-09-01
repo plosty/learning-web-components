@@ -1,18 +1,78 @@
-.address-form {
+* {
+  box-sizing: border-box;
+}
+
+.form-container {
+  width: 500px;
+  border: 1px solid rgb(62, 214, 27);
+  border-radius: 10px;
+  padding: 5px;
+  padding-left: 0px;
+}
+
+.ac-container {
+  width: 100%;
+}
+
+.ac-container .ac-menu-section {
+  width: 100%;
+  border: 1px solid rgb(255, 200, 255);
+  padding-bottom: 1px;
+  margin-bottom: 1px;
+  list-style: none;
+  margin-left: -25px;
+}
+
+.ac-container .accordion-1 {
+  display: none;
+}
+
+.ac-container ul {
+  padding: 0;
+  margin: 0;
+  list-style: 0;
+  padding-left: -25px;
+}
+
+.ac-container li {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  text-indent: 0px;
+}
+
+.ac-container .accordion-label {
+	padding: 5px;
+	position: relative;
+	display: block;
+	cursor: pointer;
+  background: #e25e2d;
+  color: black;
+}
+
+.ac-menu-section input {
+  width: 100%;
+}
+
+.address-form, .payment-form {
   border: 1px solid rgb(62, 214, 27);
   border-radius: 10px;
   padding: 5px;
   margin-bottom: 10px;
 }
-.checkboxes label {
-  display: block;
-  float: left;
-  padding-right: 10px;
-  white-space: nowrap;
+
+.ac-container .content {
+	margin-top: -1px;
+	overflow: hidden;
+	height: 0px;
+	position: relative;
 }
-.checkboxes input {
-  vertical-align: middle;
+
+.ac-container input:checked + label {
+	background: #b70736;
+  color: white;
 }
-.checkboxes label span {
-  vertical-align: middle;
+
+.ac-container input:checked ~ .content{
+	height: 100%;
 }
