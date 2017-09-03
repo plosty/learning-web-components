@@ -25,6 +25,6 @@ This page details my web-components
 
 ### Product Listing Page
 
-[Product Page](https://plosty.github.io/learning-web-components/product-page/product-page.html)
+[Product Page](https://plosty.github.io/learning-web-components/product-page/product.html)
 
 [Product Page Code](https://github.com/plosty/learning-web-components/tree/master/product-page/)
