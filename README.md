@@ -24,3 +24,7 @@ This page details my web-components
 [Forms Code](https://github.com/plosty/learning-web-components/tree/master/forms/) - Repo for the Forms projects listed above
 
 ### Product Listing Page
+
+[Product Page](https://plosty.github.io/learning-web-components/product-page/product-page.html)
+
+[Product Page Code](https://github.com/plosty/learning-web-components/tree/master/product-page/)
