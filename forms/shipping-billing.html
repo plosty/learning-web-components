@@ -2,10 +2,11 @@
 <head>
   <!--<link rel="stylesheet" type="text/css" href="forms.css" />-->
   <link rel="stylesheet" type="text/css" href="shipping-billing.css" />
-  <title>Shipping and Billing Form</title>
+  <title>Shipping, Billing and Payment Form</title>
 </head>
 <body>
   <div class="form-container">
+    <h1>Shipping, Billing and Payment</h1>
     <!-- Address Section -->
     <form>
       <ul class="ac-container">
@@ -13,8 +14,8 @@
           <li class="ac-menu-section">
             <input id="ac-1" name="accordion-1" class="accordion-1" type="radio" checked>
             <label for="ac-1" class="accordion-label">Shipping And Billing Form</label>
-            <div class="address-section content">
-              <div class="address-form" id="shipping-form">
+            <div class="address-section content-section">
+              <div class="address-form content" id="shipping-form">
                   <h2>Shipping Address Form</h2>
                   <label for="first-name">First Name</label>
                   <input type="text" id="first-name" name="first-name" placeholder="First Name" required />
@@ -27,24 +28,23 @@
 
                   <label for="city">City</label>
                   <input type="text" id="city"  name="city" placeholder="City" required />
-
-                  <label for="country">Country</label>
-                  <select id="country" name="country">
-                    <option value="uk">UK</option>
-                    <option value="usa">USA</option>
-                    <option value="canada">Canada</option>
-                  </select>
+                  <div class="dropdown">
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                      <option value="uk">UK</option>
+                      <option value="usa">USA</option>
+                      <option value="canada">Canada</option>
+                    </select>
+                  </div>
               </div>
 
               <div class="checkboxes">
-                <!--<label for="same-address">
-                  <input type="checkbox" id="same-address" name="same-address" checked />
-                    <span>Is Billing Address the same as the Shipping Address?</span>
-                </label>-->
-                <p>Is Billing Address the same as the Shipping Address?</p>
+                <input type="checkbox" id="same-address" name="same-address" class="same-address" checked />
+                <label for="same-address">Is Billing Address the same as the Shipping Address?</label>
+                <div class="clear"></div>
               </div>
 
-              <div class="address-form" id="billing-form">
+              <div class="address-form content" id="billing-form">
                 <h2>Billing Address Form</h2>
                 <label for="first-name">First Name</label>
                 <input type="text" id="first-name" name="first-name" placeholder="First Name" required />
@@ -58,12 +58,14 @@
                 <label for="city">City</label>
                 <input type="text" id="city"  name="city" placeholder="City" required />
 
-                <label for="country">Country</label>
-                <select id="country" name="country">
-                  <option value="uk">UK</option>
-                  <option value="usa">USA</option>
-                  <option value="canada">Canada</option>
-                </select>
+                <div class="dropdown">
+                  <label for="country">Country</label>
+                  <select id="country" name="country">
+                    <option value="uk">UK</option>
+                    <option value="usa">USA</option>
+                    <option value="canada">Canada</option>
+                  </select>
+                </div>
               </div>
             </div>
           </li>
@@ -71,8 +73,8 @@
           <li class="ac-menu-section">
             <input id="ac-2" name="accordion-1" class="accordion-1" type="radio">
             <label for="ac-2" class="accordion-label">Payment Form</label>
-            <div class="payment-form content">
-              <h2>Payment Form</h2>
+            <div class="payment-form content-section">
+              <h2>Card Details</h2>
               <label for="full-name">Full Name</label>
               <input type="text" id="full-name" name="full-name" required />
 
@@ -82,44 +84,48 @@
               <label for="ccv-number">CCV Number</label>
               <input type="text" id="cc-number"  name="ccc-number" size="4" required />
 
-              <label for="month">Month</label>
-              <select id="month" name="month">
-                <option value="january">January</option>
-                <option value="february">February</option>
-                <option value="march">March</option>
-                <option value="april">April</option>
-                <option value="may">May</option>
-                <option value="june">June</option>
-                <option value="july">July</option>
-                <option value="august">August</option>
-                <option value="september">September</option>
-                <option value="october">October</option>
-                <option value="november">November</option>
-                <option value="december">December</option>
-              </select>
+              <div class="dropdown">
+                <label for="month">Month</label>
+                <select id="month" name="month">
+                  <option value="january">January</option>
+                  <option value="february">February</option>
+                  <option value="march">March</option>
+                  <option value="april">April</option>
+                  <option value="may">May</option>
+                  <option value="june">June</option>
+                  <option value="july">July</option>
+                  <option value="august">August</option>
+                  <option value="september">September</option>
+                  <option value="october">October</option>
+                  <option value="november">November</option>
+                  <option value="december">December</option>
+                </select>
 
-              <label for="year">Year</label>
-              <select id="year" name="year">
-                <option value="2017">2017</option>
-                <option value="2018">2018</option>
-                <option value="2019">2019</option>
-                <option value="2020">2020</option>
-                <option value="2021">2021</option>
-                <option value="2022">2022</option>
-                <option value="2023">2023</option>
-                <option value="2024">2024</option>
-                <option value="2025">2025</option>
-                <option value="2026">2026</option>
-                <option value="2027">2027</option>
-                <option value="2028">2028</option>
-                <option value="2029">2029</option>
-                <option value="2030">2030</option>
-                <option value="2031">2031</option>
-              </select>
+                <label for="year">Year</label>
+                <select id="year" name="year">
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                  <option value="2027">2027</option>
+                  <option value="2028">2028</option>
+                  <option value="2029">2029</option>
+                  <option value="2030">2030</option>
+                  <option value="2031">2031</option>
+                </select>
+              </div>
             </div>
           </li>
+          <li class="ac-menu-section">
+            <input type="submit" class="submit-address" id="submit-address" value="Submit Payment" />
+          </li>
       </ul>
-      <input type="submit" id="submit-address" value="Submit Payment" />
     </form>
   </div>
 </body>

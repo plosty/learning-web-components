@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(62, 214, 27);
 }
 
 .form-container {
@@ -10,69 +12,103 @@
   padding-left: 0px;
 }
 
-.ac-container {
-  width: 100%;
+.form-container h1 {
+  text-align: center;
+  font-weight: normal;
 }
 
-.ac-container .ac-menu-section {
-  width: 100%;
-  border: 1px solid rgb(255, 200, 255);
-  padding-bottom: 1px;
-  margin-bottom: 1px;
-  list-style: none;
-  margin-left: -25px;
+.form-container h2 {  
+  font-weight: normal;
 }
 
-.ac-container .accordion-1 {
+.form-container .accordion-1 {
   display: none;
 }
 
-.ac-container ul {
-  padding: 0;
-  margin: 0;
-  list-style: 0;
-  padding-left: -25px;
-}
-
-.ac-container li {
-  padding: 0;
-  margin: 0;
-  text-align: left;
-  text-indent: 0px;
-}
-
-.ac-container .accordion-label {
-	padding: 5px;
-	position: relative;
-	display: block;
-	cursor: pointer;
-  background: #e25e2d;
-  color: black;
-}
-
-.ac-menu-section input {
+.form-container .ac-container input {
   width: 100%;
 }
 
-.address-form, .payment-form {
+.form-container .ac-menu-section {  
+  border: 1px solid rgb(62, 214, 27);
+  border-radius: 10px; 
+  padding: 5px;
+}
+
+.form-container .accordian-1, .accordion-label {
+  color: rgb(62, 214, 27);
+  height: 40px;
+  font-size: 25px;
+  padding-right: 175px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.form-container .content-section {
+	overflow: hidden;
+  height: 0px;
+  padding-top: 5px;
+  margin-bottom: 5px;
+}
+
+.form-container .content-section input {
+  height: 40px;
+  padding-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 1px solid rgb(62, 214, 27);
+  border-radius: 10px;  
+}
+
+.form-container .content-section input:placeholder {
+  color: #b7f7c0;
+}
+
+.form-container .ac-menu-section {  
+  list-style: none;
+  margin-left: -25px;
+  margin-bottom: 1px;
+}
+
+.form-container .ac-container input:checked ~ .content-section{
+	height: 100%;
+}
+
+.form-container .dropdown select {
   border: 1px solid rgb(62, 214, 27);
   border-radius: 10px;
-  padding: 5px;
-  margin-bottom: 10px;
+  height: 40px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: black;
 }
 
-.ac-container .content {
-	margin-top: -1px;
-	overflow: hidden;
-	height: 0px;
-	position: relative;
+.form-container .checkboxes {
+  margin-top: 10px;
+}
+.form-container .checkboxes input {
+    float: left;
+    margin-top: 5px;
+    width: 20px;
+    height: 12px;
 }
 
-.ac-container input:checked + label {
-	background: #b70736;
-  color: white;
+.form-container label {
+  margin-top: 5px;
 }
 
-.ac-container input:checked ~ .content{
-	height: 100%;
+.form-container .checkboxes label {
+  margin-top: 5px;
+  padding-top: 5px;
+}
+
+.form-container .ac-menu-section .submit-address {
+  height: 40px;
+  font-size: 25px;
+  border: 1px solid white;
+}
+
+.clear {
+  clear: both;
 }

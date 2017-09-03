@@ -17,9 +17,7 @@ This page details my web-components
 ### HTML5 Forms
 [Signup](https://plosty.github.io/learning-web-components/forms/signup.html) 
 
-[Shipping & Billing](https://plosty.github.io/learning-web-components/forms/shipping-billing.html)
-
-[Payment](https://plosty.github.io/learning-web-components/forms/payment.html)
+[Shipping, Billing & Payment](https://plosty.github.io/learning-web-components/forms/shipping-billing.html)
 
 [Scheduling](https://plosty.github.io/learning-web-components/forms/scheduling.html)
 
