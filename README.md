@@ -1,6 +1,6 @@
 # learning-web-components
 
-This page shows web-components I have created while studying HTML/CSS/Javascript
+This page shows web-components created while studying HTML/CSS/Javascript
 
 ## Web Components
 
