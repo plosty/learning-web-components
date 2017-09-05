@@ -17,7 +17,7 @@
   font-weight: normal;
 }
 
-.form-container h2 {  
+.form-container h2 {
   font-weight: normal;
 }
 
@@ -29,20 +29,20 @@
   width: 100%;
 }
 
-.form-container .ac-menu-section {  
+.form-container .ac-menu-section {
   border: 1px solid rgb(62, 214, 27);
-  border-radius: 10px; 
+  border-radius: 10px;
   padding: 5px;
 }
 
-.form-container .accordian-1, .accordion-label {
-  color: rgb(62, 214, 27);
+.form-container .accordion-label {
+  width: inherit;
+  color: rgb(203, 204, 201);
+  background-color: rgb(218, 255, 211);
+  border-radius: 10px;
   height: 40px;
   font-size: 25px;
-  padding-right: 175px;
   cursor: pointer;
-  margin-bottom: 5px;
-  margin-top: 5px;
 }
 
 .form-container .content-section {
@@ -58,14 +58,14 @@
   margin-top: 5px;
   margin-bottom: 5px;
   border: 1px solid rgb(62, 214, 27);
-  border-radius: 10px;  
+  border-radius: 10px;
 }
 
 .form-container .content-section input:placeholder {
   color: #b7f7c0;
 }
 
-.form-container .ac-menu-section {  
+.form-container .ac-menu-section {
   list-style: none;
   margin-left: -25px;
   margin-bottom: 1px;

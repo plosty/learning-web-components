@@ -1,1 +1,68 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(62, 214, 27);
+}
 
+.form-container {
+  width: 500px;
+  border: 1px solid rgb(62, 214, 27);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.form-container input {
+  width: 100%;
+  border: 1px solid rgb(62, 214, 27);
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #e3e3e3;
+  height: 40px;
+  font-size: 1em;
+}
+
+.form-container input[type=submit] {
+  font-size: 1em;
+}
+
+.form-container input:focus {
+  border: 1px solid rgb(48, 165, 21);
+  background-color: rgb(62, 214, 27);
+  color: white;
+}
+
+.form-container input:hover {
+  border: 1px solid #21ff3b;
+}
+
+.form-container textarea {
+  height: 100px;
+  width: 100%;
+  border: 1px solid rgb(62, 214, 27);
+  border-radius: 5px;
+  background-color: #e3e3e3;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.form-container textarea:focus {
+  border: 1px solid rgb(48, 165, 21);
+  background-color: rgb(62, 214, 27);
+  color: white;
+  padding-top: 5px;
+}
+
+.form-container select {
+  height: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid rgb(62, 214, 27);
+  border-radius: 5px;
+}
