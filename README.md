@@ -1,6 +1,6 @@
 # learning-web-components
 
-This page details my web-components
+This page shows web-components created while studying HTML/CSS/Javascript
 
 ## Web Components
 
@@ -28,3 +28,6 @@ This page details my web-components
 [Product Page](https://plosty.github.io/learning-web-components/product-page/product.html)
 
 [Product Page Code](https://github.com/plosty/learning-web-components/tree/master/product-page/)
+
+## React Components
+
