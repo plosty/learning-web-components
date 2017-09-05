@@ -2,8 +2,8 @@
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
 }
-body {    
-    background-color: #fcdce2;
+body {
+    background: linear-gradient(#fcdce2, #eee);
 }
 .split-left {
   width: 62%;
@@ -53,7 +53,7 @@ h1 {
 }
 .product-details .product-text .product-price {
     font-size: 25px;
-    font-weight: 600; 
+    font-weight: 600;
     font-style: oblique;
     float: left;
 }
@@ -67,7 +67,7 @@ h1 {
 }
 /* Cart */
 .cart {
-    border: 1px solid darkred;    
+    border: 1px solid darkred;
 }
 .cart .cart-products {
     border: 1px solid pink;
