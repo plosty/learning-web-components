@@ -17,31 +17,32 @@
   margin-bottom: 1px;
 }
 .ac-container label {
-	padding: 5px;
-	position: relative;
-	display: block;
-	cursor: pointer;
+  padding: 5px;
+  position: relative;
+  display: block;
+  cursor: pointer;
   background: #e25e2d;
   color: black;
 }
 .ac-container label:hover {
-	background: #f27b4f;
+  background: #f27b4f;
 }
 .ac-container input {
-	display: none;
+  display: none;
 }
 .ac-container .content {
-	margin-top: -1px;
-	overflow: hidden;
-	height: 0px;
-	position: relative;
+  margin-top: -1px;
+  overflow: hidden;
+  height: 0px;
+  position: relative;
+  transition: 0.5s all;
 }
 .ac-container input:checked + label {
-	background: #b70736;
+  background: #b70736;
   color: white;
 }
 .ac-container input:checked ~ .content{
-	height: 250px;
+  height: 250px;
 }
 .content {
   margin-left: 5px;

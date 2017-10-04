@@ -26,6 +26,7 @@
 
 .form-container input[type=submit] {
   font-size: 1em;
+  cursor: pointer;
 }
 
 .form-container input:focus {
@@ -76,5 +77,6 @@ input {
 
 input:focus {
   border: 1px solid blue;
-  background-color: rgb(213, 224, 242)
+  background-color: rgb(213, 224, 242);
+  outline: none;
 }
