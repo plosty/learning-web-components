@@ -80,3 +80,10 @@ input:focus {
   background-color: rgb(213, 224, 242);
   outline: none;
 }
+
+.error {
+  border: 2px solid red;
+  border-radius: 5px;
+  padding: 2px;
+  color: red;
+}
