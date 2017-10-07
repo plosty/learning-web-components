@@ -40,18 +40,6 @@
   border: 1px solid #21ff3b;
 }
 
-.form-container .date-fields {
-  width: 100%;
-}
-
-.form-container .time-fields {
-  width: 100%;
-}
-
-.form-container .timezone-fields {
-  width: 100%;
-}
-
 .form-container .w25 {
   width: 25%;
 }
