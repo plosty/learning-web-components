@@ -4,13 +4,39 @@ var validator = (function(window) {
 var validator = {};
 
 /*
+* isTime(time)
+*
+* validate time formats
+*/
+validator.isTime = function(hours, minutes) {
+  if(!hours || !minutes) return false;
+
+  return ((hours >= 0 && hours <=23 ) && (minutes >=0 && minutes <=59 ));
+}
+
+/*
+* isTimezone(timezone)
+*
+* compares input against a list of valid timezones
+*/
+validator.isTimezone = function(timezone) {
+  if(!timezone) return false;
+  var timezones = ["GMT", "PST", "CET", "AST", "MST", "CST"];
+  for (i=0; i<timezones.length; i++) {
+    if (timezones[i]===timezone) 
+     return true;
+  }
+  return false;
+}
+
+/*
 * isValidUsername(username)
 * Checks if the username meets required details
 */
 validator.isValidUsername = function(username) {
   if (!username || username === "") return false;
 
-  if (username.length > 6){
+  if (username.length > 3){
     return true;
   }
   else {
@@ -84,7 +110,7 @@ console.log(validator.isEmailAddress());
 */
 
 validator.isPhoneNumber = function(phoneNumber) {
-  if (!phoneNumber) throw "Missing Parameter in the phoneNumber function: 'phoneNumber'."
+  if (!phoneNumber) return false;
 
   var numberLength = phoneNumber.length;
 
@@ -135,7 +161,7 @@ console.log(validator.isPhoneNumber()); // -> error
 */
 
 validator.isDate = function(date) {
-  if (!date) throw "Missing Parameter in the isDate function: 'date'."
+  if (!date) return false;
 
   if (date instanceof Date)
     return true;

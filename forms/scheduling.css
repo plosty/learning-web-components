@@ -40,6 +40,26 @@
   border: 1px solid #21ff3b;
 }
 
+.form-container .date-fields {
+  width: 100%;
+}
+
+.form-container .time-fields {
+  width: 100%;
+}
+
+.form-container .timezone-fields {
+  width: 100%;
+}
+
+.form-container .w25 {
+  width: 25%;
+}
+
+.form-container .w100 {
+  width: 100%;
+}
+
 .form-container textarea {
   height: 100px;
   width: 100%;
@@ -80,4 +100,18 @@ input {
 input:focus {
   border: 1px solid blue;
   background-color: rgb(213, 224, 242)
+}
+
+.valid {
+  border: 2px solid rgb(62, 214, 27);
+  border-radius: 5px;
+  padding: 3px;
+  color: inherit;
+}
+
+.invalid {
+  border: 2px solid red;
+  border-radius: 5px;
+  padding: 3px;
+  color: red;
 }

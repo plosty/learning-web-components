@@ -7,28 +7,41 @@
   <div class="form-container">
     <div class="scheduling-form">
       <h1>Scheduling Form</h1>
-      <form>
-        <label for="date">Date</label>
-        <input type="date" id="date" name="date" required />
-
-        <label for="time">Time</label>
-        <input type="datetime-local" id="time" name="time"required />
-
-        <label for="timezone">Timezone</label>
-        <input type="text" id="timezone" name="timezone" required />
-
-        <label for="contact-number">Contact Number</label>
-        <input type="text" id="contact-number" name="contact-number" required />
-
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="message-area">Message</label>
-        <textarea id="message-area" name="message-area" placeholder="Please enter your messages here" >
-        </textarea>
-
-        <input type="submit" id="submit-schedule" value="Submit Schedule" />
-      </form>
+      <div id="scheduling">
+        <form>
+          <label for="date" id="date-label">Date</label>
+          <div class="date-fields">            
+            <input type="text" id="day" name="date" class="date-field w25" placeholder="DD" />
+            <input type="text" id="month" name="date" class="date-field w25" placeholder="MM" />
+            <input type="text" id="year" name="date" class="date-field w25" placeholder="YYYY" />
+          </div>
+          
+          <label for="time" id="time-label">Time</label>
+          <div class="time-fields w100">            
+            <input type="text" id="hour" name="time" class="time-field w25" placeholder="HH" />
+            <input type="text" id="minute" name="time" class="time-field w25" placeholder="MM" />
+          </div>
+  
+          <label for="timezone" id="timezone-label">Timezone</label>
+          <div class="timezone-fields w100">
+            <input type="text" id="timezone" class="w25" name="timezone"/>
+          </div>
+  
+          <label for="contact-number" id="contact-number-label" >Contact Number</label>
+          <input type="text" id="contact-number" name="contact-number"/>
+  
+          <label for="email" id="email-label">Email Address</label>
+          <input type="email" id="email" name="email"/>
+  
+          <label for="message-area" id="message-area-label">Message</label>
+          <textarea id="message-area" name="message-area" placeholder="Please enter your messages here" >
+          </textarea>
+  
+          <input type="submit" id="submit-schedule" value="Submit Schedule" />
+        </form>
+      </div>      
     </div>
-  </div>
+  </div>  
+  <script src="scheduling.js"></script>
+  <script src="../scripts/validator.js"></script>
 </body>
