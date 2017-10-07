@@ -4,6 +4,17 @@ var validator = (function(window) {
 var validator = {};
 
 /*
+* isConfirmedPassword(password, confirmedPassword)
+*
+* validate password and password confirmation match
+*/
+validator.isConfirmedPassword = function(password, confirmedPassword) {
+  if(!password || !confirmedPassword) return false;
+
+  return (password === confirmedPassword);
+}
+
+/*
 * isTime(time)
 *
 * validate time formats

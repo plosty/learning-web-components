@@ -6,29 +6,35 @@
 </head>
 <body>
   <div class="form-container">
-    <div class="signup-form">
+    <div class="signup-form" id="signup-form">
       <h1>Signup Form</h1>
       <form>
-        <label for="first-name">First Name</label>
-        <input type="text" id="first-name" name="first-name" required />
+        <label for="first-name" id="first-name-label">First Name</label>
+        <input type="text" id="first-name" name="first-name" />
 
-        <label for="last-name">Last Name</label>
-        <input type="text" id="last-name"  name="last-name" required />
+        <label for="last-name" id="last-name-label">Last Name</label>
+        <input type="text" id="last-name"  name="last-name" />
 
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required />
+        <label for="email" id="email-label">Email Address</label>
+        <input type="email" id="email" name="email" />
 
-        <label for="date-of-birth">Date of Birth</label>
-        <input type="datetime-local" id="date-of-birth" name="date-of-birth" required />
+        <label for="date-label" id="date-label">Date of Birth</label>
+        <div class="date-fields">            
+          <input type="text" id="day"   name="date-of-birth" class="date-field w25" placeholder="DD" />
+          <input type="text" id="month" name="date-of-birth" class="date-field w25" placeholder="MM" />
+          <input type="text" id="year"  name="date-of-birth" class="date-field w25" placeholder="YYYY" />
+        </div>
 
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required />
+        <label for="password" id="password-label">Password</label>
+        <input type="password" id="password" name="password" />
 
-        <label for="confirm-password">Confirm Password</label>
-        <input type="password" id="confirm-password" name="confirm-password" required />
+        <label for="confirm-password" id="confirm-password-label">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" />
 
         <input type="submit" id="submit-details" value="Signup" />
       </form>
     </div>
   </div>
+  <script src="signup.js"></script>
+  <script src="../scripts/validator.js"></script>
 </body>
