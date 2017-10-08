@@ -118,3 +118,17 @@
 .clear {
   clear: both;
 }
+
+.valid {
+  border: 2px solid rgb(62, 214, 27);
+  border-radius: 5px;
+  padding: 3px;
+  color: inherit;
+}
+
+.invalid {
+  border: 2px solid red;
+  border-radius: 5px;
+  padding: 3px;
+  color: red;
+}

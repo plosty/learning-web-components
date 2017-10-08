@@ -581,8 +581,9 @@ console.log(validator.isComposedOf("Iamnotready.", ["I", "I'm", "am", "not", "re
 */
 
 validator.isOfLengthOrLessThan = function(input, n) {
-  if (!input) throw "Missing Parameter in the isOfLengthOrLessThan function: 'input'.";
-  if (!n) throw "Missing Parameter in the isOfLengthOrLessThan function: 'n'.";
+  //if (!input) throw "Missing Parameter in the isOfLengthOrLessThan function: 'input'.";
+  //if (!n) throw "Missing Parameter in the isOfLengthOrLessThan function: 'n'.";
+  if (!input || !n) return false;
 
   return input.length <= n ? true : false;
 }
@@ -599,8 +600,9 @@ console.log(validator.isOfLengthOrLessThan("This could be a tweet!", 140)); // t
 */
 
 validator.isOfLengthOrGreaterThan = function(input, n) {
-  if (!input) throw "Missing Parameter in the isOfLengthOrGreaterThan function: 'input'.";
-  if (!n) throw "Missing Parameter in the isOfLengthOrGreaterThan function: 'n'.";
+  // if (!input) throw "Missing Parameter in the isOfLengthOrGreaterThan function: 'input'.";
+  // if (!n) throw "Missing Parameter in the isOfLengthOrGreaterThan function: 'n'.";
+  if (!input || !n) return false;
 
   return input.length >= n ? true : false;
 }
@@ -712,8 +714,9 @@ console.log(validator.isAlphanumeric("12345")); // returns true
 */
 
 validator.isCreditCard = function(input) {
-  if(!input) throw "Missing Parameter in the isCreditCard function not found for 'input'" ;
-
+  // if(!input) throw "Missing Parameter in the isCreditCard function not found for 'input'" ;
+  if(!input) return false;
+  
   var inputLength = input.length;
 
   if (inputLength===16 || inputLength===19) {
