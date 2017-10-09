@@ -6,6 +6,9 @@
   <title>Product Page</title>
 </head>
 <body>
+  <div id="display-checkout" class="fixed-top-right">
+    <button id="display-checkout-button" class="button">Checkout</button>
+  </div>
   <div id="products" class="split-left w100">
       <h1>Products</h1>
       <div id="product-listing">
@@ -24,7 +27,7 @@
                     </p>
                   </div>
                   <div class="product-price">£1,920.00</div>
-                  <input type="button" class="add-to-cart-button button" value="Add To Cart" />
+                  <input type="button" id="product-button-01" class="add-to-cart-button button" value="Add To Cart" />
               </div>
           </div>
           <div class="product-details">
@@ -201,8 +204,7 @@
   </div>
   <div id="cart" class="split-right hidden">
     <h1>Cart</h1>
-    <div class="cart-products">
-      <div class="cart-products-margin">
+    <div id="cart-products">
         <div class="product-cart-listing">
             <div class="product-image"><img src="images/product-1.jpg" alt="Product Image" /></div>
             <div class="product-text">
@@ -215,7 +217,7 @@
                 <input type="button" class="remove-button button" value="Remove Item" />
             </div>
         </div>
-        <div class="product-cart-listing">
+        <!--<div class="product-cart-listing">
             <div class="product-image"><img src="images/product-2.jpg" alt="Product Image" /></div>
             <div class="product-text">
                 <div class="product-name">Pinarello Gan S Easy Fit 2017 Ultegra - Pink</div>
@@ -238,20 +240,19 @@
                 </div>
                 <input type="button" class="remove-button button" value="Remove Item" />
             </div>
-        </div>
-      </div>
+        </div>-->
     </div>
-    <div class="cart-details">
-        <div class="cart-price-section">
-          <div class="total-price">Total Price: <span class="price-display">£9,718.00</span></div>
-          <div class="apply-voucher">
+    <div id="cart-details">
+        <div id="cart-price-section">
+          <div id="total-price">Total Price: <span class="price-display">£9,718.00</span></div>
+          <div id="apply-voucher">
               <input type="text" class="split-left" placeholder="voucher code"/>
               <input type="button" class="split-left button" value="Apply Voucher"/>
           </div>
         </div>
-        <div class="checkout-buttons">
-            <input type="button" value="Keep Shopping" class="keep-shopping-button button"/>
-            <input type="button" value="Checkout" class="checkout-button button"/>
+        <div id="checkout-buttons">
+            <input type="button" value="Keep Shopping" id="keep-shopping-button" class="button"/>
+            <input type="button" value="Checkout" id="checkout-button" class="button"/>
         </div>
     </div>
   </div>
