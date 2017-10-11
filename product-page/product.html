@@ -206,30 +206,30 @@
     <h1>Cart</h1>
     <div id="cart-products">
         <div class="product-cart-listing">
-            <div class="product-image"><img src="images/product-1.jpg" alt="Product Image" /></div>
-            <div class="product-text">
-                <div class="product-name">Pinarello Gan 2017 Shimano 105 Mix Carbon/Sky </div>
-                <div class="product-price">£1,920.00</div>
-                <div class="product-quantity-row">
-                  <label for="product-quantity">Quantity</label>
-                  <input type="text" name="product-quantity" class="product-quantity" placeholder="1" />
+            <div class="product-cart-image"><img src="images/product-1.jpg" alt="Product Image" /></div>
+            <div class="product-cart-text">
+                <div class="product-cart-name">Pinarello Gan 2017 Shimano 105 Mix Carbon/Sky </div>
+                <div>£<span class="product-cart-price">1920.00</span></div>
+                <div class="product-cart-quantity-row">
+                  <label for="product-cart-quantity">Quantity</label>
+                  <input type="text" name="product-cart-quantity" class="product-cart-quantity" value="1" />
                 </div>
-                <input type="button" class="remove-button button" value="Remove Item" />
-            </div>
-        </div>
-        <!--<div class="product-cart-listing">
-            <div class="product-image"><img src="images/product-2.jpg" alt="Product Image" /></div>
-            <div class="product-text">
-                <div class="product-name">Pinarello Gan S Easy Fit 2017 Ultegra - Pink</div>
-                <div class="product-price">£2,799.00</div>
-                <div class="product-quantity-row">
-                  <label for="product-quantity">Quantity</label>
-                  <input type="text" name="product-quantity" class="product-quantity" placeholder="1" />
-                </div>
-                <input type="button" class="remove-button button" value="Remove Item" />
+                <input type="button" class="product-cart-remove-button button" value="Remove Item" />
             </div>
         </div>
         <div class="product-cart-listing">
+            <div class="product-cart-image"><img src="images/product-2.jpg" alt="Product Image" /></div>
+            <div class="product-cart-text">
+                <div class="product-cart-name">Pinarello Gan S Easy Fit 2017 Ultegra - Pink</div>
+                <div>£<span class="product-cart-price">2799.00</span></div>
+                <div class="product-cart-quantity-row">
+                  <label for="product-cart-quantity">Quantity</label>
+                  <input type="text" name="product-cart-quantity" class="product-cart-quantity" value="1" />
+                </div>
+                <input type="button" class="product-cart-remove-button button" value="Remove Item" />
+            </div>
+        </div>
+        <!--<div class="product-cart-listing">
             <div class="product-image"><img src="images/product-3.jpg" alt="Product Image" /></div>
             <div class="product-text">
                 <div class="product-name">Pinarello Dogma F8 968 Sky Blue / Orange Demo</div>
@@ -244,10 +244,10 @@
     </div>
     <div id="cart-details">
         <div id="cart-price-section">
-          <div id="total-price">Total Price: <span class="price-display">£9,718.00</span></div>
+          <div id="total-price">Total Price: <span class="price-display">£</span><span id="total-price-amount" class="price-display">0.00</span></div>
           <div id="apply-voucher">
-              <input type="text" class="split-left" placeholder="voucher code"/>
-              <input type="button" class="split-left button" value="Apply Voucher"/>
+              <input type="text" class="split-left" id="voucher-code" placeholder="voucher code"/>
+              <input type="button" id="apply-voucher-button" class="split-left button" value="Apply Voucher"/>
           </div>
         </div>
         <div id="checkout-buttons">
