@@ -1,19 +1,5 @@
-
-document.getElementById("product-listing").addEventListener("load", addListenersToProductButtons());
-
-function addListenersToProductButtons() {
-  var buttonList = document.getElementsByClassName("add-to-cart-button");
-  for (bNum = 0; bNum < buttonList.length; bNum++) {
-      buttonList[bNum].addEventListener("click", function() {
-          // adding product-button-10 to every method call
-          addToCart("product-button-" + bNum);
-      });
-  }
-}
-
 document.getElementById("display-checkout-button").addEventListener("click", toggleCart);
-// document.getElementById("product-button-01").addEventListener("click", addToCart());
-
+document.getElementById("product-listing").addEventListener("click", addToCart);
 
 function toggleCart() {
   var cart = document.getElementById("cart");
@@ -30,11 +16,15 @@ function toggleCart() {
 
 function addToCart(buttonId) {
   var cart = document.getElementById("cart");
+  var cartProducts = document.getElementById("cart-products");
   var products = document.getElementById("products");
   if (cartIsHidden()) {
     toggleCart();
   }
-  alert(buttonId);
+
+  cartProducts.insertAdjacentHTML( 'afterbegin',
+    '<div class="product-cart-listing"><div class="product-image"><img src="images/product-1.jpg" alt="Product Image" /></div><div class="product-text"><div class="product-name">Pinarello Gan 2017 Shimano 105 Mix Carbon/Sky </div><div class="product-price">£1,920.00</div><div class="product-quantity-row"><label for="product-quantity">Quantity</label><input type="text" name="product-quantity" class="product-quantity" placeholder="1" /></div><input type="button" class="remove-buttonbutton" value="Remove Item" /></div></div>'
+  );
 }
 
 function cartIsEmpty() {
