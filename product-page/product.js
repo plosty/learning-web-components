@@ -14,72 +14,72 @@ function toggleCart() {
   }
 }
 
-var productList = document.getElementsByClassName("product-details");
+var productList = document.getElementsByClassName("add-to-cart-button");
 for (i=0; i<productList.length; i++) {
   productList[i].addEventListener("click", addToCart);
 }
 
 function addToCart(buttonId) {
 
-  // construct html for product //
-/*      <div class="product-cart-listing">
-          <div class="product-cart-image"><img src="images/product-1.jpg" alt="Product Image" /></div>
-          <div class="product-cart-text">
-              <div class="product-cart-name">Pinarello Gan 2017 Shimano 105 Mix Carbon/Sky </div>
-              <div>£<span class="product-cart-price">1920.00</span></div>
-              <div class="product-cart-quantity-row">
-                <label for="product-cart-quantity">Quantity</label>
-                <input type="text" name="product-cart-quantity" class="product-cart-quantity" value="1" />
-              </div>
-              <input type="button" class="product-cart-remove-button button" value="Remove Item" />
-          </div>
-      </div>
-*/
-  //image
-  var imageUrl = this.childNodes[1].childNodes[1].childNodes[0].getAttribute("src");
-  alert("imageUrl: " + imageUrl);
-  // title
-  var title = this.childNodes[3].childNodes[1].innerText;
-  alert("title: " + title);
-  // price
-  var price = this.childNodes[3].childNodes[5].innerText;
-  alert("price: " + price);
-  // quantity
-
-  // button
-
-  // add to cart
-
+  if(cartIsHidden()) { toggleCart() };
   var cartProducts = document.getElementById("cart-products");
-  if (cartIsHidden()) {
-    toggleCart();
-  }
+  var baseNode = this.parentNode.parentNode;
+  // capture the details from the product that triggered the add to cart event
+  var imageUrl = baseNode.childNodes[1].childNodes[1].childNodes[0].getAttribute("src");
+  var title = baseNode.childNodes[3].childNodes[1].innerText;
+  var price = baseNode.childNodes[3].childNodes[5].innerText.slice(1);
+  
+  // construct lines for inserting the product
+  // container
+  var containerLine = '<div class="product-cart-listing">';
+  //image
+  var imageLine = '<div class="product-cart-image"><img src="' + imageUrl + '" alt="Product Image" /></div>';
+  // title
+  var detailContainerLine = '<div class="product-cart-text">';
+  var titleLine = '<div class="product-cart-name">' + title +  '</div>';
+  // price
+  var priceLine = '<div>£<span class="product-cart-price">' + price + '</span></div>';
+  var unitPriceLine = '<div>£<span class="product-unit-price">' + price + '</span></div>';
+  // quantity,  button and closure
+  var closureLine = '<div class="product-cart-quantity-row"><label for="product-cart-quantity">Quantity</label><input type="text" name="product-cart-quantity" class="product-cart-quantity" value="1" /></div><input type="button" class="product-cart-remove-button button" value="Remove Item" /></div></div>';
+  // put the html lines together
+  var productCartListing = containerLine + imageLine + detailContainerLine + titleLine + priceLine + unitPriceLine + closureLine;
 
-  cartProducts.insertAdjacentHTML( 'afterbegin',
-    '<div class="product-cart-listing"><div class="product-cart-image"><img src="images/product-1.jpg" alt="Product Image" /></div><div class="product-cart-text"><div class="product-cart-name">Pinarello Gan 2017 Shimano 105 Mix Carbon/Sky </div><div>£<span class="product-cart-price">1920.00</span></div><div class="product-cart-quantity-row"><label for="product-cart-quantity">Quantity</label><input type="text" name="product-cart-quantity" class="product-cart-quantity" placeholder="1" /></div><input type="button" class="product-cart-remove-button button" value="Remove Item" /></div></div>'
-  );
+  cartProducts.insertAdjacentHTML( 'afterbegin', productCartListing);
 
   calculateTotal();
-}
 
-var cartProducts = document.getElementsByClassName("product-cart-remove-button");
-for (i=0; i<cartProducts.length; i++) {
-  cartProducts[i].addEventListener("click", removeProduct);
+  // add event listener to buttons
+  var newCartProducts = document.getElementsByClassName("product-cart-remove-button");
+  for (i=0; i<newCartProducts.length; i++) {
+    newCartProducts[i].addEventListener("click", removeProduct);
+  }
+
+  var newCartProductQuantities = document.getElementsByClassName("product-cart-quantity");
+  for (i=0; i<newCartProductQuantities.length; i++) {
+    newCartProductQuantities[i].addEventListener("change", changeProductQuantity);
+  }
 }
 
 function removeProduct() {
-  var cartProductContainer = document.getElementById("cart-products");
-  cartProductContainer.removeChild(cartProductContainer.childNodes[0]);
+  var cartProductContainer = this.parentNode.parentNode;
+  cartProductContainer.parentNode.removeChild(cartProductContainer);
   calculateTotal();
 }
 
-var cartProductQuantities = document.getElementsByClassName("product-cart-quantity");
-for (i=0; i<cartProductQuantities.length; i++) {
-  cartProducts[i].addEventListener("change", changeProductQuantity);
-}
-
 function changeProductQuantity() {
-
+  var baseNode = this.parentNode.parentNode;
+  alert(baseNode.nodeName);
+  alert(baseNode.innerHTML);
+  alert(baseNode.childNodes.length);
+  var quantity = this.value;
+  alert("quantity: " + quantity);
+  var price = baseNode.childNodes[1].childNodes[1];
+  alert("price: " + price);
+  var unitPrice = baseNode.childNodes[1].innerText.slice(1);
+  alert("unit price: " + unitPrice);
+  price.innerText = (unitPrice * quantity).toFixed(2);
+  calculateTotal();
 }
 
 function cartIsEmpty() {
@@ -96,36 +96,41 @@ document.getElementById("cart-products").addEventListener("change", calculateTot
 
 function calculateTotal() {
   var cartPrices = document.getElementsByClassName("product-cart-price");
-    var totalPrice = 0;
+  var totalPrice = 0;
   for (var i=0; i<cartPrices.length; i++) {
     cartValue=parseFloat(cartPrices[i].innerText);
     totalPrice+=cartValue;
   }
-  document.getElementById("total-price-amount").innerText = totalPrice.toFixed(2);
+  var subtotal = document.getElementById("subtotal-price-amount");
+  var discountPercent = document.getElementById("discount-percent-amount");
+  var discountAmount = document.getElementById("discount-amount");
+  var total = document.getElementById("total-price-amount-value");
+
+  subtotal.innerText = totalPrice.toFixed(2);
+  discountAmount.innerText = (subtotal.innerText * (discountPercent.innerText / 10)).toFixed(2);
+  total.innerText = (subtotal.innerText - discountAmount.innerText).toFixed(2);
 }
 
 document.getElementById("apply-voucher-button").addEventListener("click", applyDiscountCode);
 
 function applyDiscountCode() {
-  var currentAmount=document.getElementById("total-price-amount").innerText;
   var discountCode=document.getElementById("voucher-code");
-
-  var discountAmount = 0;
+  var discountField=document.getElementById("discount-amount");
 
   switch(discountCode.value) {
     case("DISCOUNT_10"):
-      discountAmount = 0.1;
+      discountAmount = 10;
       discountCode.value="";
       break;
     case("DISCOUNT_5"):
-      discountAmount = 0.05;
+      discountAmount = 5;
       discountCode.value="";
     break;
     default:
       discountCode.value="Code Not Found";
       break;
   }
-
-  currentAmount=currentAmount-(currentAmount*discountAmount);
-  document.getElementById("total-price-amount").innerText = currentAmount.toFixed(2);
+  
+  discountField.innerText = discountAmount;
+  calculateTotal();
 }
