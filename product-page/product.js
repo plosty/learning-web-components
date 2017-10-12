@@ -14,23 +14,43 @@ function toggleCart() {
   }
 }
 
-//document.getElementById("product-listing").addEventListener("click", addToCart);
 var productList = document.getElementsByClassName("product-details");
 for (i=0; i<productList.length; i++) {
   productList[i].addEventListener("click", addToCart);
 }
 
 function addToCart(buttonId) {
-  for (var i=0; i<this.childNodes[3].childNodes.length; i++) {
-    alert("childNode nodeName: " + i + " : " + this.childNodes[3].childNodes[i].nodeName);
-    alert("childNode innerText: " + i + " : " + this.childNodes[3].childNodes[i].innerText);
-  }
+
+  // construct html for product //
+/*      <div class="product-cart-listing">
+          <div class="product-cart-image"><img src="images/product-1.jpg" alt="Product Image" /></div>
+          <div class="product-cart-text">
+              <div class="product-cart-name">Pinarello Gan 2017 Shimano 105 Mix Carbon/Sky </div>
+              <div>£<span class="product-cart-price">1920.00</span></div>
+              <div class="product-cart-quantity-row">
+                <label for="product-cart-quantity">Quantity</label>
+                <input type="text" name="product-cart-quantity" class="product-cart-quantity" value="1" />
+              </div>
+              <input type="button" class="product-cart-remove-button button" value="Remove Item" />
+          </div>
+      </div>
+*/
+  //image
+  var imageUrl = this.childNodes[1].childNodes[1].childNodes[0].getAttribute("src");
+  alert("imageUrl: " + imageUrl);
+  // title
   var title = this.childNodes[3].childNodes[1].innerText;
   alert("title: " + title);
+  // price
+  var price = this.childNodes[3].childNodes[5].innerText;
+  alert("price: " + price);
+  // quantity
 
-  var cart = document.getElementById("cart");
+  // button
+
+  // add to cart
+
   var cartProducts = document.getElementById("cart-products");
-  var products = document.getElementById("products");
   if (cartIsHidden()) {
     toggleCart();
   }
@@ -59,7 +79,7 @@ for (i=0; i<cartProductQuantities.length; i++) {
 }
 
 function changeProductQuantity() {
-  
+
 }
 
 function cartIsEmpty() {
