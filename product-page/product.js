@@ -69,15 +69,9 @@ function removeProduct() {
 
 function changeProductQuantity() {
   var baseNode = this.parentNode.parentNode;
-  alert(baseNode.nodeName);
-  alert(baseNode.innerHTML);
-  alert(baseNode.childNodes.length);
   var quantity = this.value;
-  alert("quantity: " + quantity);
   var price = baseNode.childNodes[1].childNodes[1];
-  alert("price: " + price);
   var unitPrice = baseNode.childNodes[1].innerText.slice(1);
-  alert("unit price: " + unitPrice);
   price.innerText = (unitPrice * quantity).toFixed(2);
   calculateTotal();
 }
@@ -107,30 +101,28 @@ function calculateTotal() {
   var total = document.getElementById("total-price-amount-value");
 
   subtotal.innerText = totalPrice.toFixed(2);
-  discountAmount.innerText = (subtotal.innerText * (discountPercent.innerText / 10)).toFixed(2);
+  discountAmount.innerText = (subtotal.innerText * (discountPercent.innerText / 100)).toFixed(2);
   total.innerText = (subtotal.innerText - discountAmount.innerText).toFixed(2);
 }
 
 document.getElementById("apply-voucher-button").addEventListener("click", applyDiscountCode);
 
 function applyDiscountCode() {
-  var discountCode=document.getElementById("voucher-code");
-  var discountField=document.getElementById("discount-amount");
-
+  var discountCode = document.getElementById("voucher-code");
+  var discountField = document.getElementById("discount-percent-amount");
+  var currentDiscount = parseInt(discountField.innerText);
+  
   switch(discountCode.value) {
     case("DISCOUNT_10"):
-      discountAmount = 10;
-      discountCode.value="";
+      discountField.innerText = currentDiscount + 10;
       break;
     case("DISCOUNT_5"):
-      discountAmount = 5;
-      discountCode.value="";
-    break;
+      discountField.innerText  = currentDiscount + 5;
+      break;
     default:
       discountCode.value="Code Not Found";
       break;
   }
   
-  discountField.innerText = discountAmount;
   calculateTotal();
 }
