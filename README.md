@@ -31,9 +31,9 @@ This page shows web-components created while studying HTML/CSS/Javascript
 
 ### Fantasy Football Page
 
-[Fantasy Football Page](https://plosty.github.io/learning-web-components/fantasyFootballLeague/fantasyFootballLeague.html)
+[Fantasy Football Registration Page](https://plosty.github.io/learning-web-components/fantasy-football-league/registration.html)
 
-[Fantasy Football Code](https://github.com/plosty/learning-web-components/tree/master/fantasyFootballLeague/)
+[Fantasy Football Page Code](https://github.com/plosty/learning-web-components/tree/master/fantasy-football-league/)
 
 ## React Components
 
