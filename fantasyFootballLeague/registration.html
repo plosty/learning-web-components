@@ -1,0 +1,107 @@
+<html>   
+  <head>    
+    <title>
+      Mastering HTML : Project Assignment
+    </title>    
+    <!-- Insert meta elements here -->    
+  </head>
+  
+  <body>    
+    <!-- Insert SVG snippet here -->
+    <svg width="600" height="100" style="border:1px solid black;">
+    <defs>
+        <linearGradient id="rect2Gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:rgb(0,255,0);stop-opacity:1" />
+            <stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:1" />
+        </linearGradient>
+    </defs>
+
+    <!-- SVG rectangle element -->
+    <rect x="50" y="10" width="500" height="80" style="fill:url(#rect2Gradient);stroke-width:2;stroke:black;opacity:0.5" />
+      
+    <!-- SVG text element -->
+    <text font-size="20" font-family="Verdana" x="160" y="55">FantasyFootballLeague.com</text>
+    
+    <header>
+      <!-- Insert header contents here-->
+      <div>Welcome to FantasyLeague.com: New user registration portal</div>
+    </header>
+    
+    <section>
+      <!-- Create HTML Table here -->
+      <table>
+        <thead>
+          <tr>
+            <th><b>League Type</b></th>
+            <th><b>Cost</b></th>
+            <th><b>Start Date</b></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Free league</td>
+            <td>$0</td>
+            <td>2/20/2017</td>
+          </tr>
+          <tr>
+            <td>Pro league</td>
+            <td>$200/season</td>
+            <td>2/15/2017</td>
+          </tr>
+          <tr>
+            <td>Weekly league</td>
+            <td>$20/week</td>
+            <td>3/1/2017</td>
+          </tr>
+        </tbody>            
+    </section>
+    
+    <section>
+      <!-- Create the HTML Form here -->
+      <form method="POST" name="registrationForm" enctype="multipart/form-data">
+        <fieldset id="personalInfo" name="personalInfo">
+          <h1>Personal Info</h1>
+          <label for="firstName">First Name</label>
+          <input type="text" placeholder="First Name" name="firstName" id="firstName" required pattern="[A-Za-z]*" autofocus>
+          <br>          
+          <label for="lastName">Last Name</label>
+          <input type="text" placeholder="Last Name" name="lastName" id="lastName">
+          <br>
+          <label for="dateOfBirth">Date of Birth</label>
+          <input type="date" placeholder="Date Of Birth" name="dateOfBirth" id="dateOfBirth" max="2017-01-01" required>
+          <br>
+          <label for="email">Email Address</label>
+          <input type="email" placeholder="email" name="email" id="email" required>
+          <br>
+          <label for="phoneNumber">Phone Number</label>
+          <input type="text" placeholder="888-888-8888" name=phoneNumber id="phoneNumber" pattern=[0-9]{3}[-]*[0-9]{3}[-]*[0-9]{4}>          
+        </fieldset>
+        <fieldset id="profileInfo" name="profileInfo">   
+          <!-- Upload profile picture, Desired username, Desired password, and Choose League Type-->
+          <h1>Profile Info</h1>
+          <label for="uploadProfilePicture">Upload a profile picture</label>
+          <input type="file" name="uploadProfilePicture" id="uploadProfilePicture">
+          <br>
+          <label for="username">Desired Username</label>
+          <input type="text" name="username" id="username" placeholder="Username" required>
+          <br>
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="Password" required>
+          <br>
+          <label for="leagueType">Choose League Type:</label><br>
+          <input type="radio" name="leagueType" value="free" required checked>Free League</input><br>
+          <input type="radio" name="leagueType" value="pro" required>Pro League</input><br>
+          <input type="radio" name="leagueType" value="weekly" required >Weekly League</input><br>
+        </fieldset>
+        <input type="submit">
+      </form>
+    </section>
+    
+    <footer>
+      <!-- Insert footer contents here-->
+      <div>Fantasy League.com: 2016 All rights reserved</div>
+    </footer>
+
+  </body>
+</html>
+
