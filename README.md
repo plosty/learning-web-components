@@ -14,8 +14,13 @@ This page shows web-components created while studying HTML/CSS/Javascript
 
 [Accordion Code](https://github.com/plosty/learning-web-components/tree/master/accordion/) - Repo for the Accordion project
 
+### Tabs
+[Tabs](https://plosty.github.io/learning-web-components/tabs/tabs.html)
+
+[Tabs Code](https://github.com/plosty/learning-web-components/tree/master/tabs/) - Repo for the Tabs project
+
 ### HTML5 Forms
-[Signup](https://plosty.github.io/learning-web-components/forms/signup.html) 
+[Signup](https://plosty.github.io/learning-web-components/forms/signup.html)
 
 [Shipping, Billing & Payment](https://plosty.github.io/learning-web-components/forms/shipping-billing.html)
 
@@ -37,3 +42,4 @@ This page shows web-components created while studying HTML/CSS/Javascript
 
 ## React Components
 
+Watch this space!
