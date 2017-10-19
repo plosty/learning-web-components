@@ -19,7 +19,7 @@ for (i=0; i<productList.length; i++) {
   productList[i].addEventListener("click", addToCart);
 }
 
-function addToCart(buttonId) {
+function addToCart() {
 
   if(cartIsHidden()) { toggleCart() };
   var cartProducts = document.getElementById("cart-products");
