@@ -1,0 +1,71 @@
+body {
+  box-sizing: border-box;
+}
+.menuBar {
+  background-color: #b5de95;
+  font-family: verdana;
+}
+
+.menuBar li {
+  display: inline-block;
+  position: relative;
+  font-size: 10pt;
+  border: 2px solid #ffffff;
+}
+
+.menuBar li.dropdown:hover > .submenu {
+  display: block;
+}
+
+.menuBar li a {
+  background: #ff0000;
+  color: #ffffff;
+  display: block;
+  padding: 12px 8px;
+  text-decoration: none;
+}
+
+.menuBar li a:hover {
+  background: #0000ff;
+}
+
+.menuBar .submenu {
+  display: none;
+}
+
+.submenu {
+  display: block;
+  left: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 200px;
+}
+
+.submenu li {
+  display: block;
+  border: 2px solid #F0F000;
+}
+
+.submenu li a {
+  background: #999;
+  color: #fff;
+  display: block;
+  margin-bottom: 1px;
+  padding: 8px 6px;
+}
+
+.menu .submenu .submenu {
+  left: 200px;
+  position: absolute;
+  top: 0px;
+}
+
+.content {
+  position: absolute;
+}
+
+.hidden {
+  visibility: hidden;
+}
