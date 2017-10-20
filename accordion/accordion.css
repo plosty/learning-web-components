@@ -16,7 +16,7 @@
   padding-bottom: 1px;
   margin-bottom: 1px;
 }
-.ac-container label {
+.ac-menu-section label {
   padding: 5px;
   position: relative;
   display: block;
@@ -24,28 +24,28 @@
   background: #e25e2d;
   color: black;
 }
-.ac-container label:hover {
+.ac-menu-section label:hover {
   background: #f27b4f;
 }
-.ac-container input {
+.ac-menu-section input {
   display: none;
 }
-.ac-container .content {
+.ac-menu-section .selected {
+  background: #b70736;
+  color: white;
+}
+.ac-menu-section .content {
   margin-top: -1px;
   overflow: hidden;
   height: 0px;
   position: relative;
   transition: 0.5s all;
 }
-.ac-container input:checked + label {
-  background: #b70736;
-  color: white;
-}
-.ac-container input:checked ~ .content{
-  height: 250px;
-}
 .content {
   margin-left: 5px;
+}
+.content.active {
+  height: 250px;
 }
 .content .menu-item {
   padding: 10;
