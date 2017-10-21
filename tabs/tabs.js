@@ -1,4 +1,3 @@
-// javascript validation functions
 var tabs = (function(window) {  
   var tabs = {};
 
