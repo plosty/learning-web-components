@@ -34,6 +34,13 @@ This page shows web-components created while studying HTML/CSS/Javascript
 
 [Product Page Code](https://github.com/plosty/learning-web-components/tree/master/product-page/)
 
+### Image Gallery
+
+[Image Gallery Page](https://plosty.github.io/learning-web-components/gallery/gallery.html)
+
+[Image Gallery Code](https://github.com/plosty/learning-web-components/tree/master/gallery/)
+
+
 ### Fantasy Football Page
 
 [Fantasy Football Registration Page](https://plosty.github.io/learning-web-components/fantasy-football-league/registration.html)
