@@ -3,15 +3,23 @@
 }
 
 .thumbnails {
+  position: absolute;
+  z-index: 1;
+  padding: 0px;
+  margin: 0px;
 }
 
-.thumbnails li{
-  height: 100%;
-  display: inline-block;  
+
+.thumbnails li{  margin: 0;
+  list-style: none; 
+  display: block;
+  height: 100%;  
   position: relative;
   background-color: #535759;
   border: 5px solid #535759;
-  float:left;
+  float: left;
+  padding: 0px;
+  margin: 0px;
 }
 
 .thumbnails li:hover{
@@ -19,5 +27,11 @@
 }
 
 .image {
+  position: absolute;
+  z-index: 0;
+  width: 99%;
+}
+
+.image img {
   width: 100%;
 }
