@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+    box-sizing: border-box;    
 }
 
 .thumbnails {
@@ -8,7 +8,6 @@
   padding: 0px;
   margin: 0px;
 }
-
 
 .thumbnails li{  margin: 0;
   list-style: none; 
@@ -29,9 +28,10 @@
 .image {
   position: absolute;
   z-index: 0;
-  width: 99%;
+  width: 99%;  
 }
 
 .image img {
-  width: 100%;
+  width: 100%;  
+  transition: 5s all;
 }

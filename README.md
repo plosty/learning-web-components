@@ -19,6 +19,11 @@ This page shows web-components created while studying HTML/CSS/Javascript
 
 [Tabs Code](https://github.com/plosty/learning-web-components/tree/master/tabs/) - Repo for the Tabs project
 
+### Header
+[Header](https://plosty.github.io/learning-web-components/header/header.html)
+
+[Header Code](https://github.com/plosty/learning-web-components/tree/master/header/) - Repo for the Header project
+
 ### HTML5 Forms
 [Signup](https://plosty.github.io/learning-web-components/forms/signup.html)
 
