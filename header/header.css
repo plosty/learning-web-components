@@ -1,32 +1,40 @@
 body {
   box-sizing: border-box;
+  background-color: rgb(237, 238, 237);
+  color: #4F6457;
 }
 .menuBar {
-  background-color: #b5de95;
+  background-color: #75B1A9;
   font-family: verdana;
 }
 
-.menuBar li {
-  display: inline-block;
+.menuBar .section {
+  display: inline-block;  
   position: relative;
   font-size: 10pt;
-  border: 2px solid #ffffff;
+  border: 1px solid #ACD0C0;
 }
 
 .menuBar li.dropdown:hover > .submenu {
   display: block;
 }
 
-.menuBar li a {
-  background: #ff0000;
+.menuBar .section a {
+  background: #4F6457;
   color: #ffffff;
   display: block;
   padding: 12px 8px;
   text-decoration: none;
 }
 
-.menuBar li a:hover {
-  background: #0000ff;
+.menuBar .selected a.selected {
+  background: #D9B44A ;
+  color: #4F6457;
+}
+
+.menuBar .section a:hover {
+  background: #D9B44A ;
+  color: #4F6457;
 }
 
 .menuBar .submenu {
@@ -64,6 +72,21 @@ body {
 
 .content {
   position: absolute;
+}
+
+.content li {
+  border: none;
+  text-decoration: none;
+}
+
+.content a {  
+  text-decoration: none;  
+  color: #4F6457;
+}
+
+.content a:hover {  
+  text-decoration: none;
+  color: #75B1A9;
 }
 
 .hidden {

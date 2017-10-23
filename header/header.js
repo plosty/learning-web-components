@@ -7,15 +7,18 @@ var header = (function(window) {
   }
 
   function openContent() {
+    // node = li within menubar 
     var headerNode = this;
     var departmentLinks = document.getElementsByClassName("section");
     for (i=0; i<departmentLinks.length; i++) {     
-      if (departmentLinks[i]===headerNode) {      
+      if (departmentLinks[i]===headerNode) { 
+        headerNode.nextSibling.nextSibling.className=("content");     
         headerNode.className=("section selected");
-        headerNode.nextSibling.nextSibling.className=("content");
+        headerNode.childNodes[0].className=("selected");
       }
       else {
         departmentLinks[i].className=("section");
+        departmentLinks[i].childNodes[0].className = "";
         departmentLinks[i].nextSibling.nextSibling.className=("content hidden");
       }
     }
