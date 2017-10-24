@@ -7,10 +7,16 @@ var gallery = (function(window) {
     }
 
     function displayImage() {
-        var image = this;
-        var thumbImg=image.childNodes[0];
-        var thumbUrl=thumbImg.getAttribute("src");
-        document.getElementById("mainImage").src=thumbUrl;
+        var imageNumber = parseInt(this.id);
+        var images = document.getElementsByClassName("image");
+        for(i=0; i<images.length; i++) {
+            if(i===imageNumber){
+                images[i].className="image";
+            }
+            else {
+                images[i].className="image hidden";
+            }
+        }
     }
 
     return gallery;

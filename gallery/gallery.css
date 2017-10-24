@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;    
+  box-sizing: border-box;    
 }
 
 .thumbnails {
@@ -9,7 +9,8 @@
   margin: 0px;
 }
 
-.thumbnails li{  margin: 0;
+.thumbnails li{  
+  margin: 0;
   list-style: none; 
   display: block;
   height: 100%;  
@@ -25,13 +26,19 @@
   cursor: pointer;
 }
 
-.image {
-  position: absolute;
-  z-index: 0;
-  width: 99%;  
+.images {
+  width: 100%;
 }
 
-.image img {
-  width: 100%;  
-  transition: 5s all;
+.image {
+  width: 99%;
+  position: absolute;  
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.hidden {
+  opacity: 0; 
 }
