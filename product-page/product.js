@@ -85,41 +85,70 @@ function changeProductQuantity() {
   calculateTotal();
 }
 
-function calculateTotal() {
+function calculateTotal() {  
+  var subtotal = document.getElementById("subtotal-price-amount");
+  var discountCode = document.getElementById("applied-discount-code");
+  var discountAmount = document.getElementById("discount-amount");
+  var total = document.getElementById("total-price-amount-value");
+
+  subtotal.innerText = calculateSubtotal();
+  discountAmount.innerText = calculateDiscountAmount(discountCode.innerHTML);
+  total.innerText = (subtotal.innerText - discountAmount.innerText).toFixed(2);
+}
+
+function calculateSubtotal() {
   var cartPrices = document.getElementsByClassName("product-cart-price");
   var totalPrice = 0;
   for (var i=0; i<cartPrices.length; i++) {
     cartValue=parseFloat(cartPrices[i].innerText);
     totalPrice+=cartValue;
   }
-  var subtotal = document.getElementById("subtotal-price-amount");
-  var discountPercent = document.getElementById("discount-percent-amount");
-  var discountAmount = document.getElementById("discount-amount");
-  var total = document.getElementById("total-price-amount-value");
+  return totalPrice.toFixed(2);
+}
 
-  subtotal.innerText = totalPrice.toFixed(2);
-  discountAmount.innerText = (subtotal.innerText * (discountPercent.innerText / 100)).toFixed(2);
-  total.innerText = (subtotal.innerText - discountAmount.innerText).toFixed(2);
+function calculateDiscountAmount(discountCode) {
+  if(!discountCode || discountCode==="" || discountCode==="None") {
+    return 0;
+  }
+  else {
+    var subtotal = document.getElementById("subtotal-price-amount").innerText;
+    switch(discountCode) {
+      case("DISCOUNT_5"):
+        // remove 5% off all products
+        return (subtotal*0.05).toFixed(2);
+        break;
+      case("DISCOUNT_10"):
+        // remove 10% off the highest priced item
+        var prices = document.getElementsByClassName("product-cart-price");
+        var highestPrice = 0;
+        for(var i=0; i<prices.length; i++) {
+          highestPrice = highestPrice > prices[i].innerText ? highestPrice : prices[i].innerText;
+        }
+        return (highestPrice * 0.1).toFixed(2);
+        break;
+      case("DISCOUNT_15"):
+        // apply 15% discount to products over £4000
+        var prices = document.getElementsByClassName("product-cart-price");
+        var total = 0;
+        for(var i=0; i<prices.length; i++) {
+          if (prices[i].innerText >= 4000)
+            total += prices[i].innerText;
+        }
+        return (total * 0.15).toFixed(2);
+      default:
+        return 0;
+    }
+  }
 }
 
 function applyDiscountCode() {
-  var discountCode = document.getElementById("voucher-code");
-  var discountField = document.getElementById("discount-percent-amount");
-  var currentDiscount = parseInt(discountField.innerText);
-  var subTotal = document.getElementById("subtotal");
-  var newDiscount = 0;
-  
-  switch(discountCode.value) {
-    case("DISCOUNT_10"):
-      discountField.innerText = currentDiscount + 10;
-      break;
-    case("DISCOUNT_5"):
-      discountField.innerText  = currentDiscount + 5;
-      break;
-    default:
-      discountCode.value="Code Not Found";
-      break;
-  }  
-  discount.Field.innerText = newDiscount > currentDiscount ? newDiscount : currentDiscount; 
+  var newDiscountCode = document.getElementById("voucher-code");
+  var currentDiscountCode = document.getElementById("applied-discount-code");
+  var currentDiscountAmount = document.getElementById("discount-amount");
+  var newDiscountAmount = calculateDiscountAmount(newDiscountCode.value);
+  if (newDiscountAmount > currentDiscountAmount.innerText) {
+    currentDiscountAmount.innerText = newDiscountAmount;
+    currentDiscountCode.innerText = newDiscountCode.value;
+  }
   calculateTotal();
 }
