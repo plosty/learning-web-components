@@ -1,26 +1,35 @@
+// Add event listeners
 document.getElementById("display-checkout-button").addEventListener("click", toggleCart);
+document.getElementById("cart-products").addEventListener("change", calculateTotal);
+document.getElementById("apply-voucher-button").addEventListener("click", applyDiscountCode);
+
+var productList = document.getElementsByClassName("add-to-cart-button");
+for (var i=0; i<productList.length; i++) {
+  productList[i].addEventListener("click", addToCart);
+}
 
 function toggleCart() {
+  var checkoutButton = document.getElementById("display-checkout-button");
   var cart = document.getElementById("cart");
   var products = document.getElementById("products");
   if (cart.className==="split-right hidden") {
     products.className="split-left";
     cart.className="split-right";
     calculateTotal();
+    checkoutButton.innerHTML="Close Cart";
   }
   else {
     products.className="split-left w100";
-    cart.className="split-right hidden";
+    cart.className="split-right hidden";    
+    checkoutButton.innerHTML="Open Cart";
   }
 }
 
-var productList = document.getElementsByClassName("add-to-cart-button");
-for (i=0; i<productList.length; i++) {
-  productList[i].addEventListener("click", addToCart);
+function cartIsHidden() {
+  return cart.classList.contains("hidden");
 }
 
 function addToCart() {
-
   if(cartIsHidden()) { toggleCart() };
   var cartProducts = document.getElementById("cart-products");
   var baseNode = this.parentNode.parentNode;
@@ -51,12 +60,12 @@ function addToCart() {
 
   // add event listener to buttons
   var newCartProducts = document.getElementsByClassName("product-cart-remove-button");
-  for (i=0; i<newCartProducts.length; i++) {
+  for (var i=0; i<newCartProducts.length; i++) {
     newCartProducts[i].addEventListener("click", removeProduct);
   }
 
   var newCartProductQuantities = document.getElementsByClassName("product-cart-quantity");
-  for (i=0; i<newCartProductQuantities.length; i++) {
+  for (var i=0; i<newCartProductQuantities.length; i++) {
     newCartProductQuantities[i].addEventListener("change", changeProductQuantity);
   }
 }
@@ -76,18 +85,6 @@ function changeProductQuantity() {
   calculateTotal();
 }
 
-function cartIsEmpty() {
-  var cartProductCount = document.getElementsByClassName("product-cart-listing");
-  return cartProductCount === 0 ? true : false;
-}
-
-function cartIsHidden() {
-  var cart = document.getElementById("cart");
-  return cart.className.indexOf("hidden") !== -1 ? true : false;
-}
-
-document.getElementById("cart-products").addEventListener("change", calculateTotal);
-
 function calculateTotal() {
   var cartPrices = document.getElementsByClassName("product-cart-price");
   var totalPrice = 0;
@@ -105,12 +102,12 @@ function calculateTotal() {
   total.innerText = (subtotal.innerText - discountAmount.innerText).toFixed(2);
 }
 
-document.getElementById("apply-voucher-button").addEventListener("click", applyDiscountCode);
-
 function applyDiscountCode() {
   var discountCode = document.getElementById("voucher-code");
   var discountField = document.getElementById("discount-percent-amount");
   var currentDiscount = parseInt(discountField.innerText);
+  var subTotal = document.getElementById("subtotal");
+  var newDiscount = 0;
   
   switch(discountCode.value) {
     case("DISCOUNT_10"):
@@ -122,7 +119,7 @@ function applyDiscountCode() {
     default:
       discountCode.value="Code Not Found";
       break;
-  }
-  
+  }  
+  discount.Field.innerText = newDiscount > currentDiscount ? newDiscount : currentDiscount; 
   calculateTotal();
 }
