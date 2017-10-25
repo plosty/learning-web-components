@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Tabs Component</title>
@@ -6,21 +7,21 @@
     <link rel="stylesheet" type="text/css" href="tabs.css">
   </head>
   <body>
-    <div class="tabComponent">
-      <ul class="departments">
-        <li class="departmentLink active"><a href="#">Home Decor</a></li>
-        <div class="content">
-          <h1>Browse through our list of Home Decor Items</h1>
-        </div>
-        <li class="departmentLink"><a href="#">Furniture</a></li>
-        <div class="content hidden">
-          <h1>Flash Sale on Living Room and Bedroom Furniture</h1>
-        </div>
-        <li class="departmentLink"><a href="#">Kitchen</a></li>
-        <div class="content hidden">
-          <h1>Bring the best out of the masterchef in you!!</h1>
-        </div>
-      </ul>
+    <div class="tabs">
+      <div class="tab active" id="0">Home Decor</div>
+      <div class="tab" id="1">Furniture</div>
+      <div class="tab" id="2">Kitchen</div>
+    </div>
+    <div class="contentPanels" id="contentPanels">
+      <div class="content">
+        <h1>Browse through our list of Home Decor Items</h1>
+      </div>
+      <div class="content hidden">
+        <h1>Flash Sale on Living Room and Bedroom Furniture</h1>
+      </div>
+      <div class="content hidden">
+        <h1>Bring the best out of the masterchef in you!!</h1>
+      </div>
     </div>
     <script src="tabs.js"></script>
   </body>
