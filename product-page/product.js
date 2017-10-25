@@ -132,7 +132,7 @@ function calculateDiscountAmount(discountCode) {
         var total = 0;
         for(var i=0; i<prices.length; i++) {
           if (prices[i].innerText >= 4000)
-            total += prices[i].innerText;
+            total += parseFloat(prices[i].innerText);
         }
         return (total * 0.15).toFixed(2);
       default:
