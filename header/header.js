@@ -1,27 +1,22 @@
-var header = (function(window) {  
-  var header = {};
-
-  var departmentLinks = document.getElementsByClassName("section");
-  for (i=0; i<departmentLinks.length; i++) {
-    departmentLinks[i].addEventListener("click", openContent);
+(function(window) {  
+  var headerSections = document.getElementsByClassName("section");
+  for (i=0; i<headerSections.length; i++) {
+    headerSections[i].addEventListener("click", openContent);
   }
 
   function openContent() {
     // node = li within menubar 
-    var headerNode = this;
-    var departmentLinks = document.getElementsByClassName("section");
-    for (i=0; i<departmentLinks.length; i++) {     
-      if (departmentLinks[i]===headerNode) { 
-        headerNode.nextSibling.nextSibling.className=("content");     
-        headerNode.className=("section selected");
-        headerNode.childNodes[0].className=("selected");
+    var headerNum = parseInt(this.id);
+    var contentSections = document.getElementsByClassName("content");
+    for (i=0; i<contentSections.length; i++) {     
+      if (headerNum===i) { 
+        this.className=("section selected");     
+        contentSections[i].className=("content");
       }
       else {
-        departmentLinks[i].className=("section");
-        departmentLinks[i].childNodes[0].className = "";
-        departmentLinks[i].nextSibling.nextSibling.className=("content hidden");
+        headerSections[i].className=("section");
+        contentSections[i].className=("content hidden");
       }
     }
   }
-  return header;
-})(window)
+})()

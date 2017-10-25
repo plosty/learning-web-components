@@ -2,6 +2,7 @@ body {
   box-sizing: border-box;
   background-color: rgb(237, 238, 237);
   color: #4F6457;
+  transition: all 0.5s;
 }
 .menuBar {
   background-color: #75B1A9;
@@ -71,7 +72,9 @@ body {
 }
 
 .content {
+  padding-left: 15px;
   position: absolute;
+  opacity: 1;
 }
 
 .content li {
@@ -90,5 +93,5 @@ body {
 }
 
 .hidden {
-  visibility: hidden;
+  opacity: 0;
 }
