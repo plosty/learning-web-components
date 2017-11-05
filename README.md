@@ -4,6 +4,12 @@ This page shows web-components created while studying HTML/CSS/Javascript
 
 ## Web Components
 
+### Portfolio
+[Portfolio](https://plosty.github.io/learning-web-components/portfolio/portfolio.html) - Responsive website detailing personal portfolio
+
+[Portfolio Code](https://github.com/plosty/learning-web-components/tree/master/portfolio/) - Repo for the Portfolio project
+
+
 ### Calculator
 [Calculator](https://plosty.github.io/learning-web-components/calculator/calculator.html)
 
