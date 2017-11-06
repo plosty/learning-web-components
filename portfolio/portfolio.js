@@ -6,7 +6,14 @@
   }
 
   function openSection() {
-    // scroll to related section header
+    for (var i=0; i< headerSections.length; i++) {
+      if (headerSections[i]===this) {
+        this.className = "section-link active";
+      }
+      else {
+        headerSections[i].className = "section-link";
+      }
+    }
   }
 
 })()
