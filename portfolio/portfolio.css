@@ -91,6 +91,11 @@ nav .name {
   font-weight: 400;
 }
 
+.content .section-description {  
+  text-align: center;
+  font-size: 0.8em;
+}
+
 /* responsive changes */
 @media (min-width: 360px) {
     /* nav bar changes */
@@ -126,7 +131,7 @@ nav .name {
     /* content changes */
     .content h1 {
       font-size: 1em;
-      margin: 60px;;
+      margin-top: 60px;;
     }
     /* footer changes */
     footer {
