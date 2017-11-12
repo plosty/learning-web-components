@@ -96,6 +96,63 @@ nav .name {
   font-size: 0.8em;
 }
 
+/* Projects Page */
+.components-container {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: flex;
+  border: 1px solid darkmagenta;
+}
+
+.components-container ul {
+  list-style: none;
+  width: 25%;
+  margin: 0;
+  padding: 0;
+}
+
+.components-container li {
+  text-decoration: none;
+  font-size: 0.9em;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.components-container .selected-component {
+  background: darkgrey;
+  color: rgb(167, 93, 167);
+  font-weight: 400;
+}
+
+.components-container .components-display-container {
+  background-color: darkgrey;
+  width: 75%;
+}
+
+.components-container .component-display {
+  position: absolute;
+  opacity: 0;
+}
+
+.components-container .selected-component {
+  opacity: 1;
+}
+
+.component-display .carousel {
+  width: 50%;
+  margin: 10px;
+}
+
+.components-container .component-footer {
+  bottom: 0px;
+}
+
+
+
+
 /* responsive changes */
 @media (min-width: 360px) {
     /* nav bar changes */
