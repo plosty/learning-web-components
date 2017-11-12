@@ -34,6 +34,7 @@ nav {
   text-align: center;
   align-items: center;
   top: 0px;
+  z-index: 100;
 }
 
 nav .name {
@@ -78,6 +79,7 @@ nav .name {
 
 .content {
   min-height: 100vh;
+  max-height: 100%;
   padding-left: 5px;
   padding-right: 5px;
   border: 1px solid red; 
@@ -102,23 +104,31 @@ nav .name {
   margin: 0 auto;
   margin-top: 10px;
   display: flex;
-  border: 1px solid darkmagenta;
+  font-size: 0.8em;
+  height: 100%;
 }
 
-.components-container ul {
+.components-container .components-list {
   list-style: none;
   width: 25%;
   margin: 0;
   padding: 0;
 }
 
-.components-container li {
+.components-container .component-list-item {
   text-decoration: none;
-  font-size: 0.9em;
+  font-size: 0.8em;
   margin: 0;
   padding: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
   width: 100%;
   text-align: left;
+  cursor: pointer;
+}
+
+.components-container .component-list-item:hover {
+  border-right: 2px solid rgb(167, 93, 167);
 }
 
 .components-container .selected-component {
@@ -130,27 +140,74 @@ nav .name {
 .components-container .components-display-container {
   background-color: darkgrey;
   width: 75%;
+  position: relative;
 }
 
-.components-container .component-display {
+.components-display-container .component-display {
   position: absolute;
-  opacity: 0;
+  opacity: 0;  
 }
 
-.components-container .selected-component {
+.components-display-container .selected-component {
   opacity: 1;
 }
 
 .component-display .carousel {
-  width: 50%;
+  width: 90%;
   margin: 10px;
+}
+
+.carousel img {
+  width: 100%;
+  object-fit: cover;
 }
 
 .components-container .component-footer {
   bottom: 0px;
 }
 
+.component-footer a {
+  text-decoration: none;
+  font-size: 0.7em;
+}
 
+.component-footer .component-project-link {
+  color: rgb(110, 110, 247);
+}
+
+.component-footer .component-source-link {
+  color: rgb(112, 109, 109);
+}
+
+/* Skills Page */
+
+
+/* About Page */
+#contact-section .contact-links {
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-section .contact-link {
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-section .contact-link img {
+  margin: 5px;
+}
+
+#contact-section .contact-link a {
+  text-decoration: none;
+  color: black;
+  font-size: 0.8em;
+}
 
 
 /* responsive changes */

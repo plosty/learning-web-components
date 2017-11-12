@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="portfolio.css" />
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <title>Portfolio of my work - Phil Losty @ BOV Academy of Programming and Innovation</title>
+  <title>Responsive portfolio of my work - Phil Losty @ BOV Academy of Programming and Innovation</title>
 </head>
 <body>
   <nav>  
@@ -16,129 +16,212 @@
     </ul>
   </nav>
   <div id="content-container">
-      <section class="content">
+      <section class="content" id="about-section">
         <a name="about-section" class="section-header"></a>
         <h1>About</h1>
-        <div class="section-description">Phil Losty - more details about me</div>
+        <p class="section-description">Details about my background, history and future plans.</p>
+        <h2>Background</h2>
+        <h3>Work History</h3>
+        <p>My technical background is mainly in Quality Assurance.</p>
+        <p>After initially joining Cap Gemini as a graduate, I joined the support team of a small startup company called Application Networks, who provided financial software to some of the worlds largest investment banks.</p>
+        <p>Over the next few years, as the company was bought and merged with Reuters and eventually Misys, I moved more in specialising in Quality Assurance</p>
+        <p>In 2015, I moved away from financial software to become QA manager of a small team at Piriform, the makers of the PC optimisation software CCleaner.</p>
+        <p>As a team, we focus on making sure our much-loved products are performing to the standards demanded by our 2m+ users. We are trying to build up expertise in automated tests to help achieve this</p>
+        <h3>Education</h3>
+        <p>My first degree was in Management Science at Warwick Universty. </p>
+        <p>Following that, whilst working, I completed my MSc in Computer Science at Birkbeck University, who specialise in part-time study. </p>
+        <p>Finally in 2016 I completed my BSc in Mathemantics and Statistics at the Open University, as a part-time distance learning course.</p>
+        <h2>Future Aims and Ambitions</h2>
+        <p>I have a keen interest in developing my technical skills and knowledge, which was why I signed up for the BOV Academy of Innovation and Programming Full Stack Developer course</p>
+        <p>My aim by the end of 2018 is to become a proficient Full Stack engineer, specialising in JavaScript, React and Node</p>
+        <p>This portfolio site showcases some of the work I have produced during the completion of the course.</p>
+        <p>If you have any questions, please feel free to get in touch via any of the methods in the Contact section</p>
       </section>
-      <section class="content">
+      <section class="content" id="projects-section">
         <a name="projects-section" class="section-header"></a>
         <h1>Projects</h1>
-        <div class="section-description">Projects created whilst learning at the BOV Academy</div>
+        <div class="section-description">Projects created whilst studying at the BOV Academy</div>
         <div class="components-container">
-          <ul>
-            <li class="selected-component">Calculator</li>          
-            <li>Accordion</li>
-            <li>Tabs</li>
-            <li>Header</li>
-            <li>Forms</li>
-            <li>Product Page</li>
-            <li>Image Gallery</li>
-            <li>Fantasy Football</li>
+          <ul class="components-list">
+            <li class="component-list-item selected-component">Calculator</li>          
+            <li class="component-list-item">Accordion</li>
+            <li class="component-list-item">Tabs</li>
+            <li class="component-list-item">Header</li>
+            <li class="component-list-item">Forms</li>
+            <li class="component-list-item">Product Page</li>
+            <li class="component-list-item">Image Gallery</li>
           </ul>
           <div class="components-display-container">
             <div class="component-display selected-component">
               <div class="carousel">
-                <img src="images/calculator.PNG" alt="calculator"/>
+                <div class="image-container">
+                  <picture>
+                    <img src="images/calculator.PNG" alt="calculator"/>
+                  </picture>
+                </div>
               </div>
               <div class="component-details">
-                <div class="component-details-header"></div>
-                <div class="component-details-text"></div>
+                <div class="component-details-header">
+                  <h3><em>Technologies:</em> HTML5, CSS3, Vanilla JavaScript</h3>
+                </div>
+                <div class="component-details-text">
+                  <p>Calculator component created using HTML5, CSS styling and JavaScript functionality</p>
+                </div>
               </div>              
               <div class="component-footer">
-                <a href="#">Project Link</a>
-                <a href="#">Project Source</a>
+                <a href="https://plosty.github.io/learning-web-components/calculator/calculator.html" class="component-project-link">Project Link</a>
+                <a href="https://github.com/plosty/learning-web-components/tree/master/calculator/" class="component-source-link">Project Source on GitHub</a>
               </div>
             </div>
             <div class="component-display">
-              <div class="carousel">Accordion carousel</div>
-              <div class="component-details">
-                <div class="component-details-header"></div>
-                <div class="component-details-text"></div>
+              <div class="carousel">
+                <div class="image-container">
+                  <picture>
+                    <img src="images/accordion.PNG" alt="accordion"/>
+                  </picture>
+                </div>
               </div>
+              <div class="component-details">
+                <div class="component-details-header">
+                  <h3><em>Technologies:</em> HTML5, CSS3, Vanilla JavaScript</h3>
+                </div>
+                <div class="component-details-text">
+                  <p>An accordion component created using HTML5, CSS styling and JavaScript functionality</p>
+                </div>
+              </div>              
               <div class="component-footer">
-                <a href="#">Project Link</a>
-                <a href="#">Project Source</a>
+                <a href="https://plosty.github.io/learning-web-components/accordion/accordion.html" class="component-project-link">Project Link</a>
+                <a href="https://github.com/plosty/learning-web-components/tree/master/accordion/" class="component-source-link">Project Source on GitHub</a>
               </div>
             </div>
             <div class="component-display">
-              <div class="carousel">Tabs carousel</div>
-              <div class="component-details">
-                <div class="component-details-header"></div>
-                <div class="component-details-text"></div>
+              <div class="carousel">
+                <div class="image-container">
+                  <picture>
+                    <img src="images/tabs.PNG" alt="accordion"/>
+                  </picture>
+                </div>
               </div>
+              <div class="component-details">
+                <div class="component-details-header">
+                  <h3><em>Technologies:</em> HTML5, CSS3, Vanilla JavaScript</h3>
+                </div>
+                <div class="component-details-text">
+                  <p>Tabs component created using HTML5, CSS styling and JavaScript functionality</p>
+                </div>
+              </div>              
               <div class="component-footer">
-                <a href="#">Project Link</a>
-                <a href="#">Project Source</a>
+                <a href="https://plosty.github.io/learning-web-components/tabs/tabs.html" class="component-project-link">Project Link</a>
+                <a href="https://github.com/plosty/learning-web-components/tree/master/tabs/" class="component-source-link">Project Source on GitHub</a>
               </div>
             </div>
             <div class="component-display">
-              <div class="carousel">Header carousel</div>
-              <div class="component-details">
-                <div class="component-details-header"></div>
-                <div class="component-details-text"></div>
+              <div class="carousel">
+                <div class="image-container">
+                  <picture>
+                    <img src="images/header.PNG" alt="accordion"/>
+                  </picture>
+                </div>
               </div>
+              <div class="component-details">
+                <div class="component-details-header">
+                  <h3><em>Technologies:</em> HTML5, CSS3, Vanilla JavaScript</h3>
+                </div>
+                <div class="component-details-text">
+                  <p>Header component created using HTML5, CSS styling and JavaScript functionality</p>
+                </div>
+              </div>              
               <div class="component-footer">
-                <a href="#">Project Link</a>
-                <a href="#">Project Source</a>
+                <a href="https://plosty.github.io/learning-web-components/header/header.html" class="component-project-link">Project Link</a>
+                <a href="https://github.com/plosty/learning-web-components/tree/master/header/" class="component-source-link">Project Source on GitHub</a>
               </div>
             </div>
             <div class="component-display">
-              <div class="carousel">Forms carousel</div>
-              <div class="component-details">
-                <div class="component-details-header"></div>
-                <div class="component-details-text"></div>
+              <div class="carousel">
+                <div class="image-container">
+                  <picture class="carousel-picture">
+                    <img src="images/signup-form.PNG" alt="accordion"/>
+                  </picture>
+                  <picture class="carousel-picture">
+                    <img src="images/shipping-billing-payment-form.PNG" alt="accordion"/>
+                  </picture>
+                  <picture class="carousel-picture">
+                    <img src="images/scheduling-form.PNG" alt="accordion"/>
+                  </picture>
+                </div>
               </div>
+              <div class="component-details">
+                <div class="component-details-header">
+                  <h3><em>Technologies:</em> HTML5, CSS3, Vanilla JavaScript</h3>
+                </div>
+                <div class="component-details-text">
+                  <p>Multiple forms component created using HTML5, CSS styling and JavaScript functionality</p>
+                </div>
+              </div>              
               <div class="component-footer">
-                <a href="#">Project Link</a>
-                <a href="#">Project Source</a>
+                <a href="https://plosty.github.io/learning-web-components/forms/signup.html" class="component-project-link">Project Link</a>
+                <a href="https://github.com/plosty/learning-web-components/tree/master/forms/" class="component-source-link">Project Source on GitHub</a>
               </div>
             </div>
             <div class="component-display">
-              <div class="carousel">Product Page carousel</div>
-              <div class="component-details">
-                <div class="component-details-header"></div>
-                <div class="component-details-text"></div>
+              <div class="carousel">
+                <div class="image-container">
+                  <picture>
+                    <img src="images/product-page.PNG" alt="accordion"/>
+                  </picture>
+                </div>
               </div>
+              <div class="component-details">
+                <div class="component-details-header">
+                  <h3><em>Technologies:</em> HTML5, CSS3, Vanilla JavaScript</h3>
+                </div>
+                <div class="component-details-text">
+                  <p>A sales page created using HTML5, CSS styling and JavaScript functionality</p>
+                </div>
+              </div>              
               <div class="component-footer">
-                <a href="#">Project Link</a>
-                <a href="#">Project Source</a>
+                <a href="https://plosty.github.io/learning-web-components/product-page/product.html" class="component-project-link">Project Link</a>
+                <a href="https://github.com/plosty/learning-web-components/tree/master/product-page/" class="component-source-link">Project Source on GitHub</a>
               </div>
             </div>
             <div class="component-display">
-              <div class="carousel">Gallery carousel</div>
+              <div class="carousel">
+                <div class="image-container">
+                  <picture>
+                    <img src="images/image-gallery.PNG" alt="accordion"/>
+                  </picture>
+                </div>
+              </div>
               <div class="component-details">
-                <div class="component-details-header"></div>
-                <div class="component-details-text"></div>
-              </div>
+                <div class="component-details-header">
+                  <h3><em>Technologies:</em> HTML5, CSS3, Vanilla JavaScript</h3>
+                </div>
+                <div class="component-details-text">
+                  <p>An image gallery created using HTML5, CSS styling and JavaScript functionality</p>
+                </div>
+              </div>              
               <div class="component-footer">
-                <a href="#">Project Link</a>
-                <a href="#">Project Source</a>
+                <a href="https://plosty.github.io/learning-web-components/gallery/gallery.html" class="component-project-link">Project Link</a>
+                <a href="https://github.com/plosty/learning-web-components/tree/master/gallery/" class="component-source-link">Project Source on GitHub</a>
               </div>
-            </div>
-            <div class="component-display">
-              <div class="carousel">Fantasy Football carousel</div>
-              <div class="component-details">
-                <div class="component-details-header"></div>
-                <div class="component-details-text"></div>
-              </div>
-              <div class="component-footer">
-                <a href="#">Project Link</a>
-                <a href="#">Project Source</a>
-              </div>
-            </div>
+            </div>      
           </div>
         </div>
       </section>
-      <section class="content">
+      <section class="content" id="skills-section">
         <a name="skills-section" class="section-header"></a>
         <h1>Skills</h1>
         <div class="section-description">Range of development skills learnt whilst at the BOV Academy</div>
       </section>
-      <section class="content">
+      <section class="content" id="contact-section">
         <a name="contact-section" class="section-header"></a>
         <h1>Contact</h1>
         <div class="section-description">Different ways you can get in touch with me</div>
+        <ul class="contact-links">
+          <li class="contact-link"><img src="images\linkedin_small.png" height="34px" alt="linkedIn logo" /><a href="https://www.linkedin.com/in/phil-losty-6b146779/">LinkedIn Profile</a></li>
+          <li class="contact-link"><img src="images\github_small.png" height="34px" alt="github logo" /><a href="https://github.com/plosty">GitHub Profile</a></li>
+          <li class="contact-link"><img src="images\email_small.png" width="34px" alt="email icon"/><a href="mailto:phil.losty+github_profile@gmail.com?subject=GitHub Profile Email">Email me</a></li>
+        </ul>
       </section>
   </div>
   <footer>&copy; 2017 Phil Losty</footer>

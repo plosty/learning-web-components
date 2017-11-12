@@ -1,4 +1,5 @@
 (function(window) {
+  /* Main site navigation */
   var headerSections = document.getElementsByClassName("section-link");
 
   for (var i=0; i<headerSections.length;i++) {
@@ -15,5 +16,28 @@
       }
     }
   }
+
+  /* Projects section */
+  var projectTabs = document.getElementsByClassName("component-list-item");
+  var projects = document.getElementsByClassName("component-display");
+
+  for (var i=0; i<projectTabs.length;i++) {
+    projectTabs[i].addEventListener("click", openProject);
+  }
+
+  function openProject() {
+    for (var p = 0; p<projectTabs.length; p++) {
+      if(projectTabs[p]===this) {
+        projectTabs[p].className = "component-list-item selected-component";
+        projects[p].className = "component-display selected-component";
+      } 
+      else {
+        projectTabs[p].className = "component-list-item";
+        projects[p].className = "component-display";
+      }
+    }
+
+  }
+
 
 })()
