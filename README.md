@@ -20,6 +20,12 @@ This page shows web-components created while studying HTML/CSS/Javascript
 
 [Accordion Code](https://github.com/plosty/learning-web-components/tree/master/accordion/) - Repo for the Accordion project
 
+### Carousel
+
+[Carousel](https://plosty.github.io/learning-web-components/carousel/carousel.html) - Interactive implementation of the Carousel component
+
+[Carousel](https://github.com/plosty/learning-web-components/tree/master/carousel/) - Repo for the Carousel project
+
 ### Tabs
 [Tabs](https://plosty.github.io/learning-web-components/tabs/tabs.html)
 
@@ -58,6 +64,4 @@ This page shows web-components created while studying HTML/CSS/Javascript
 
 [Fantasy Football Page Code](https://github.com/plosty/learning-web-components/tree/master/fantasy-football-league/)
 
-## React Components
 
-Watch this space!
