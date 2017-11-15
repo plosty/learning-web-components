@@ -39,6 +39,8 @@ This page shows web-components created while studying HTML/CSS/Javascript
 ### HTML5 Forms
 [Signup](https://plosty.github.io/learning-web-components/forms/signup.html)
 
+[Login](https://plosty.github.io/learning-web-components/forms/login.html)
+
 [Shipping, Billing & Payment](https://plosty.github.io/learning-web-components/forms/shipping-billing.html)
 
 [Scheduling](https://plosty.github.io/learning-web-components/forms/scheduling.html)

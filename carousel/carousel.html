@@ -5,54 +5,49 @@
   <title>Carousel</title>
 </head>
 <body>
+  <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
   <div id="carousel-container">
     <div class="carousel-page fade">
-      <div class="carousel-content">
-        <h2>Form Components</h2>
-        <p>These forms were created for the Introduction to Forms course.
-          They use HTML, CSS and JS, and also carry out some input data validation.</p>
-        <p>There are four forms created:</p>
-        <ul>
-          <li>Signup Form</li>
-          <li>Login Form</li>
-          <li>Scheduling Form</li>
-          <li>Shipping, Billing and Payment Form</li>
-        </ul>
-      </div>
+      <h2>Form Components</h2>
+      <p>These forms were created for the Introduction to Forms course.
+        They use HTML, CSS and JS, and also carry out some input data validation.</p>
+      <p>There are four forms created:</p>
+      <ul>
+        <li><a href="https://plosty.github.io/learning-web-components/forms/signup.html">Signup Form</a></li>
+        <li><a href="https://plosty.github.io/learning-web-components/forms/login.html">Login Form</a></li>
+        <li><a href="https://plosty.github.io/learning-web-components/forms/scheduling.html">Scheduling Form</a></li>
+        <li><a href="https://plosty.github.io/learning-web-components/forms/shipping-billing.html">Shipping, Billing and Payment Form</a></li>
+      </ul>
+      <p>View the <a href="https://github.com/plosty/learning-web-components/tree/master/forms/">GitHub Code Repo</a> for the Forms code</p>
+      <p>The carousel shows images of each form, the links above let you test the forms out</p>
     </div>
     <div class="carousel-page fade">
-      <div class="carousel-content">
-        <img src="images\signup-form.PNG" alt="signup form"/>
-        <div class="image-text">1: Signup Form</div>
-      </div>
+      <div class="image-text">1: Signup Form</div>
+      <img src="images\signup-form.PNG" alt="signup form"/>
     </div>
     <div class="carousel-page fade">
-      <img src="images\login-form.PNG" alt="login form"/>
       <div class="image-text">2: Login Form</div>
+      <img src="images\login-form.PNG" alt="login form"/>
     </div>
     <div class="carousel-page fade">
-      <div class="carousel-content">
-        <img src="images\scheduling-form.PNG" alt="scheduling form"/>
-        <div class="image-text">3: Scheduling Form</div>
-      </div>
+      <div class="image-text">3: Scheduling Form</div>
+      <img src="images\scheduling-form.PNG" alt="scheduling form"/>
     </div>
     <div class="carousel-page fade">
-      <div class="carousel-content">
-        <img src="images\shipping-billing-payment-form.PNG" alt="shipping billing payment form"/>
-        <div class="image-text">3: Shipping, Billing and Payment Form</div>
-      </div>
+      <div class="image-text">4: Shipping, Billing and Payment Form</div>
+      <img src="images\shipping-billing-payment-form.PNG" alt="shipping billing payment form"/>
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
 
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-    <span class="dot" onclick="currentSlide(5)"></span>
-  </div>
+
   <script src="carousel.js"></script>
 </body>
