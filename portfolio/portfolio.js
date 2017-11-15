@@ -30,13 +30,22 @@
       if(projectTabs[p]===this) {
         projectTabs[p].className = "component-list-item selected-component";
         projects[p].className = "component-display selected-component";
+        // update pages so they get picked up by the carousel
+        var carouselPages = projects[p].getElementsByClassName("carousel-page");
+        for (var j=0; j<carouselPages.length; j++) {
+          carouselPages[j].className = "carousel-page fade carousel-page-selected";
+        }
       } 
       else {
         projectTabs[p].className = "component-list-item";
         projects[p].className = "component-display";
+        // update pages so they get don't get picked up by the carousel
+        var carouselPages = projects[p].getElementsByClassName("carousel-page");
+        for (var j=0; j<carouselPages.length; j++) {
+          carouselPages[j].className = "carousel-page fade";
+        }
       }
-    }
-
+    }    
   }
 
 
