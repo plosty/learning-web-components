@@ -53,38 +53,37 @@
           </ul>
           <div class="components-display-container">
             <div class="component-display selected-component">
-              <div class="component-details">
-                <div class="carousel calculator-carousel">
-                  <div style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
+              <div class="carousel calculator-carousel">
+                <div style="text-align:center">
+                  <span class="dot-selected" onclick="currentSlide(1)"></span>
+                  <span class="dot-selected" onclick="currentSlide(2)"></span>
+                  <span class="dot-selected" onclick="currentSlide(3)"></span>
+                </div>
+                <div id="carousel-container">
+                  <div class="carousel-page fade carousel-page-selected">
+                    <h2>Calculator Component</h2>
+                    <p>The calculator component uses HTML, CSS and JS to build a working calculator</p>
+                    <ul>
+                      <li><a href="https://plosty.github.io/learning-web-components/calculator/calculator.html">Working Component hosted on GitHub.io</a></li>
+                      <li><a href="https://github.com/plosty/learning-web-components/tree/master/calculator/">GitHub Code Repo</a></li>
+                    </ul>
                   </div>
-                  <div id="carousel-container">
-                    <div class="carousel-page fade carousel-page-selected">
-                      <h2>Calcuator Component</h2>
-                      <p>The calculator component uses HTML, CSS and JS to build a working calculator</p>
-                      <ul>
-                        <li><a href="https://plosty.github.io/learning-web-components/calculator/calculator.html">Working Component hosted on GitHub.io</a></li>
-                        <li><a href="https://github.com/plosty/learning-web-components/tree/master/calculator/">GitHub Code Repo</a></li>
-                      </ul>
-                    </div>
-                    <div class="carousel-page fade  carousel-page-selected">
-                      <div class="image-text">1: Initial Screen</div>
-                      <img src="images\calculator.png" alt="calculator image"/>
-                    </div>
-                    <div class="carousel-page fade carousel-page-selected">
-                      <div class="image-text">2: Calculator in Action</div>
-                      <img src="images\calculator-in-action.png" alt="calculator image"/>
-                    </div>                    
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  <div class="carousel-page fade  carousel-page-selected">
+                    <div class="image-text">1: Initial Screen</div>
+                    <img src="images\calculator.png" alt="calculator image"/>
                   </div>
-                </div>          
+                  <div class="carousel-page fade carousel-page-selected">
+                    <div class="image-text">2: Calculator in Action</div>
+                    <img src="images\calculator-in-action.png" alt="calculator image"/>
+                  </div>                    
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+              </div>                      
               <div class="component-footer">
                 <a href="https://plosty.github.io/learning-web-components/calculator/calculator.html" class="component-project-link">Project Link</a>
                 <a href="https://github.com/plosty/learning-web-components/tree/master/calculator/" class="component-source-link">Project Source on GitHub</a>
-              </div>               
+              </div>
             </div>
             <div class="component-display">
               <div class="carousel">
@@ -238,7 +237,7 @@
               </div>
             </div>      
           </div>          
-          <script src="carousel.js"></script>
+          <!--  <script src="carousel.js"></script> moved to portfolio.js-->
         </div>
       </section>
       <section class="content" id="skills-section">

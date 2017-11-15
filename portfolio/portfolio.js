@@ -35,6 +35,7 @@
         for (var j=0; j<carouselPages.length; j++) {
           carouselPages[j].className = "carousel-page fade carousel-page-selected";
         }
+        // set the dots to unselected
       } 
       else {
         projectTabs[p].className = "component-list-item";
@@ -44,8 +45,43 @@
         for (var j=0; j<carouselPages.length; j++) {
           carouselPages[j].className = "carousel-page fade";
         }
+        // set the dots to unselected
       }
     }    
+  }
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function refreshSlides() {
+    slideIndex = 1;
+    showSlides(slideIndex);
+  }
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("carousel-page-selected");
+    var dots = document.getElementsByClassName("dot-selected");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    console.log("slides.length: " + slides.length);
+    console.log("dots.length: " + dots.length);
   }
 
 
