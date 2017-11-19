@@ -4,6 +4,7 @@
   <link rel="stylesheet" type="text/css" href="portfolio.css" />
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <title>Responsive portfolio of my work - Phil Losty @ BOV Academy of Programming and Innovation</title>  
+  
 </head>
 <body>
   <nav>  
@@ -20,7 +21,6 @@
         <a name="about-section" class="section-header"></a>
         <h1>About</h1>
         <p class="section-description">Details about my background, history and future plans.</p>
-        <h2>Background</h2>
         <h3>Work History</h3>
         <p>My technical background is mainly in Quality Assurance.</p>
         <p>After initially joining Cap Gemini as a graduate, I joined the support team of a small startup company called Application Networks, who provided financial software to some of the worlds largest investment banks.</p>
@@ -38,7 +38,7 @@
         <p>If you have any questions, please feel free to get in touch via any of the methods in the Contact section</p>
       </section>
       <section class="content" id="projects-section">
-        <a name="projects-section" class="section-header"></a>
+        <a name="projects-section" class="section-header"></a>    
         <h1>Projects</h1>
         <div class="section-description">Projects created whilst studying at the BOV Academy</div>
         <div class="components-container">
@@ -54,17 +54,17 @@
           <div class="components-display-container">
             <div class="component-display selected-component">
               <div class="carousel calculator-carousel">
-                <div style="text-align:center">
-                  <span class="dot-selected" onclick="currentSlide(1)"></span>
-                  <span class="dot-selected" onclick="currentSlide(2)"></span>
-                  <span class="dot-selected" onclick="currentSlide(3)"></span>
+                <div class = "dots-container" style="text-align:center">
+                  <span data-dotnum="1" class="dot dot-selected"></span>
+                  <span data-dotnum="2" class="dot dot-selected"></span>
+                  <span data-dotnum="3" class="dot dot-selected"></span>
                 </div>
                 <div id="carousel-container">
                   <div class="carousel-page fade carousel-page-selected">
                     <h2>Calculator Component</h2>
                     <p>The calculator component uses HTML, CSS and JS to build a working calculator</p>
                     <ul>
-                      <li><a href="https://plosty.github.io/learning-web-components/calculator/calculator.html">Working Component hosted on GitHub.io</a></li>
+                      <li><a href="https://plosty.github.io/learning-web-components/calculator/calculator.html">Working Component</a></li>
                       <li><a href="https://github.com/plosty/learning-web-components/tree/master/calculator/">GitHub Code Repo</a></li>
                     </ul>
                   </div>
@@ -76,86 +76,122 @@
                     <div class="image-text">2: Calculator in Action</div>
                     <img src="images\calculator-in-action.png" alt="calculator image"/>
                   </div>                    
-                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  <a class="prev">&#10094;</a>
+                  <a class="next">&#10095;</a>
+                </div>                      
+                <div class="component-footer">
+                  <a href="https://plosty.github.io/learning-web-components/calculator/calculator.html" class="component-project-link">Project Link</a>
+                  <a href="https://github.com/plosty/learning-web-components/tree/master/calculator/" class="component-source-link">Project Source on GitHub</a>
                 </div>
-              </div>                      
-              <div class="component-footer">
-                <a href="https://plosty.github.io/learning-web-components/calculator/calculator.html" class="component-project-link">Project Link</a>
-                <a href="https://github.com/plosty/learning-web-components/tree/master/calculator/" class="component-source-link">Project Source on GitHub</a>
               </div>
             </div>
             <div class="component-display">
-              <div class="carousel">
-                <div class="image-container">
-                  <picture>
-                    <img src="images/accordion.PNG" alt="accordion"/>
-                  </picture>
+              <div class="carousel accordion-carousel">
+                <div class = "dots-container" style="text-align:center">
+                  <span data-dotnum="1" class="dot dot-selected"></span>
+                  <span data-dotnum="2" class="dot dot-selected"></span>
+                  <span data-dotnum="3" class="dot dot-selected"></span>
                 </div>
-              </div>
-              <div class="component-details">
-                <div class="component-details-header">
-                  <h3><em>Technologies:</em> HTML5, CSS3, Vanilla JavaScript</h3>
+                <div id="carousel-container">
+                  <div class="carousel-page fade">
+                    <h2>Accordion Component</h2>
+                    <p>The accordion component uses HTML, CSS and JS to build a working menu</p>
+                    <ul>
+                      <li><a href="https://plosty.github.io/learning-web-components/accordion/accordion.html">Working Component</a></li>
+                      <li><a href="https://github.com/plosty/learning-web-components/tree/master/accordion/">GitHub Code Repo</a></li>
+                    </ul>
+                  </div>
+                  <div class="carousel-page fade">
+                    <div class="image-text">1: Initial Screen</div>
+                    <img src="images\accordion.png" alt="accordion image"/>
+                  </div>
+                  <div class="carousel-page fade">
+                    <div class="image-text">2: Accordion in Action</div>
+                    <img src="images\accordion.png" alt="accordion image"/>
+                  </div>                    
+                  <a class="prev">&#10094;</a>
+                  <a class="next">&#10095;</a>
                 </div>
-                <div class="component-details-text">
-                  <p>An accordion component created using HTML5, CSS styling and JavaScript functionality</p>
+                <div class="component-footer">
+                  <a href="https://plosty.github.io/learning-web-components/accordion/accordion.html" class="component-project-link">Project Link</a>
+                  <a href="https://github.com/plosty/learning-web-components/tree/master/accordion/" class="component-source-link">Project Source on GitHub</a>
                 </div>
-              </div>              
-              <div class="component-footer">
-                <a href="https://plosty.github.io/learning-web-components/accordion/accordion.html" class="component-project-link">Project Link</a>
-                <a href="https://github.com/plosty/learning-web-components/tree/master/accordion/" class="component-source-link">Project Source on GitHub</a>
               </div>
             </div>
             <div class="component-display">
-              <div class="carousel">
-                <div class="image-container">
-                  <picture>
-                    <img src="images/tabs.PNG" alt="accordion"/>
-                  </picture>
+              <div class="carousel tabs-carousel">
+                <div class = "dots-container" style="text-align:center">
+                  <span data-dotnum="1" class="dot dot-selected"></span>
+                  <span data-dotnum="2" class="dot dot-selected"></span>
+                  <span data-dotnum="3" class="dot dot-selected"></span>
                 </div>
-              </div>
-              <div class="component-details">
-                <div class="component-details-header">
-                  <h3><em>Technologies:</em> HTML5, CSS3, Vanilla JavaScript</h3>
+                <div id="carousel-container">
+                  <div class="carousel-page fade">
+                    <h2>Tabs Component</h2>
+                    <p>The tabs component uses HTML, CSS and JS to build a working tabs component</p>
+                    <ul>
+                      <li><a href="https://plosty.github.io/learning-web-components/tabs/tabs.html">Working Component</a></li>
+                      <li><a href="https://github.com/plosty/learning-web-components/tree/master/tabs/">GitHub Code Repo</a></li>
+                    </ul>
+                  </div>
+                  <div class="carousel-page fade">
+                    <div class="image-text">1: Initial Screen</div>
+                    <img src="images\tabs.png" alt="tabs image"/>
+                  </div>
+                  <div class="carousel-page fade">
+                    <div class="image-text">2: Tabs in Action</div>
+                    <img src="images\tabs.png" alt="tabs image"/>
+                  </div>                    
+                  <a class="prev">&#10094;</a>
+                  <a class="next">&#10095;</a>
                 </div>
-                <div class="component-details-text">
-                  <p>Tabs component created using HTML5, CSS styling and JavaScript functionality</p>
+                <div class="component-footer">
+                  <a href="https://plosty.github.io/learning-web-components/tabs/tabs.html" class="component-project-link">Project Link</a>
+                  <a href="https://github.com/plosty/learning-web-components/tree/master/tabs/" class="component-source-link">Project Source on GitHub</a>
                 </div>
-              </div>              
-              <div class="component-footer">
-                <a href="https://plosty.github.io/learning-web-components/tabs/tabs.html" class="component-project-link">Project Link</a>
-                <a href="https://github.com/plosty/learning-web-components/tree/master/tabs/" class="component-source-link">Project Source on GitHub</a>
               </div>
             </div>
             <div class="component-display">
-              <div class="carousel">
-                <div class="image-container">
-                  <picture>
-                    <img src="images/header.PNG" alt="accordion"/>
-                  </picture>
+              <div class="carousel header-carousel">
+                <div class = "dots-container" style="text-align:center">
+                  <span data-dotnum="1" class="dot dot-selected"></span>
+                  <span data-dotnum="2" class="dot dot-selected"></span>
+                  <span data-dotnum="3" class="dot dot-selected"></span>
                 </div>
-              </div>
-              <div class="component-details">
-                <div class="component-details-header">
-                  <h3><em>Technologies:</em> HTML5, CSS3, Vanilla JavaScript</h3>
+                <div id="carousel-container">
+                  <div class="carousel-page fade">
+                    <h2>Header Component</h2>
+                    <p>The header component uses HTML, CSS and JS to build a working header component</p>
+                    <ul>
+                      <li><a href="https://plosty.github.io/learning-web-components/header/header.html">Working Component</a></li>
+                      <li><a href="https://github.com/plosty/learning-web-components/tree/master/header/">GitHub Code Repo</a></li>
+                    </ul>
+                  </div>
+                  <div class="carousel-page fade">
+                    <div class="image-text">1: Initial Screen</div>
+                    <img src="images\header.png" alt="header image"/>
+                  </div>
+                  <div class="carousel-page fade">
+                    <div class="image-text">2: Header in Action</div>
+                    <img src="images\header.png" alt="header image"/>
+                  </div>                    
+                  <a class="prev">&#10094;</a>
+                  <a class="next">&#10095;</a>
                 </div>
-                <div class="component-details-text">
-                  <p>Header component created using HTML5, CSS styling and JavaScript functionality</p>
+                <div class="component-footer">
+                  <a href="https://plosty.github.io/learning-web-components/header/header.html" class="component-project-link">Project Link</a>
+                  <a href="https://github.com/plosty/learning-web-components/tree/master/header/" class="component-source-link">Project Source on GitHub</a>
                 </div>
-              </div>              
-              <div class="component-footer">
-                <a href="https://plosty.github.io/learning-web-components/header/header.html" class="component-project-link">Project Link</a>
-                <a href="https://github.com/plosty/learning-web-components/tree/master/header/" class="component-source-link">Project Source on GitHub</a>
               </div>
             </div>
             <div class="component-display">
               <div class="carousel forms-carousel">
-                <div style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                    <span class="dot" onclick="currentSlide(4)"></span>
-                    <span class="dot" onclick="currentSlide(5)"></span>
+                <div class="dots-container" style="text-align:center">
+                    <span data-dotnum="1" class="dot dot-selected"></span>
+                    <span data-dotnum="2" class="dot dot-selected"></span>
+                    <span data-dotnum="3" class="dot dot-selected"></span>
+                    <span data-dotnum="4" class="dot dot-selected"></span>
+                    <span data-dotnum="5" class="dot dot-selected"></span>
                   </div>
                 <div id="carousel-container">
                   <div class="carousel-page fade">
@@ -189,61 +225,170 @@
                     <img src="images\shipping-billing-payment-form.png" alt="shipping billing payment form"/>
                   </div>
               
-                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  <a class="prev">&#10094;</a>
+                  <a class="next">&#10095;</a>
                 </div>
               </div>              
             </div>
             <div class="component-display">
-              <div class="carousel">
-                <div class="image-container">
-                  <picture>
-                    <img src="images/product-page.PNG" alt="accordion"/>
-                  </picture>
+              <div class="carousel product-page-carousel">
+                <div class = "dots-container" style="text-align:center">
+                  <span data-dotnum="1" class="dot dot-selected"></span>
+                  <span data-dotnum="2" class="dot dot-selected"></span>
+                  <span data-dotnum="3" class="dot dot-selected"></span>
                 </div>
-              </div>
-              <div class="component-details">
-                <div class="component-details-header">
-                  <h3><em>Technologies:</em> HTML5, CSS3, Vanilla JavaScript</h3>
+                <div id="carousel-container">
+                  <div class="carousel-page fade">
+                    <h2>Product Page</h2>
+                    <p>The product page uses HTML, CSS and JS to build a sample eCommerce site</p>
+                    <ul>
+                      <li><a href="https://plosty.github.io/learning-web-components/product-page/product.html">Working Component</a></li>
+                      <li><a href="https://github.com/plosty/learning-web-components/tree/master/product-page/">GitHub Code Repo</a></li>
+                    </ul>
+                  </div>
+                  <div class="carousel-page fade">
+                    <div class="image-text">1: Initial Screen</div>
+                    <img src="images\product-page.png" alt="product page image"/>
+                  </div>
+                  <div class="carousel-page fade">
+                    <div class="image-text">2: Product Page in Action</div>
+                    <img src="images\product-page.png" alt="product page image"/>
+                  </div>                    
+                  <a class="prev">&#10094;</a>
+                  <a class="next">&#10095;</a>
                 </div>
-                <div class="component-details-text">
-                  <p>A sales page created using HTML5, CSS styling and JavaScript functionality</p>
+                <div class="component-footer">
+                  <a href="https://plosty.github.io/learning-web-components/product-page/product.html" class="component-project-link">Project Link</a>
+                  <a href="https://github.com/plosty/learning-web-components/tree/master/product-page/" class="component-source-link">Project Source on GitHub</a>
                 </div>
-              </div>              
-              <div class="component-footer">
-                <a href="https://plosty.github.io/learning-web-components/product-page/product.html" class="component-project-link">Project Link</a>
-                <a href="https://github.com/plosty/learning-web-components/tree/master/product-page/" class="component-source-link">Project Source on GitHub</a>
               </div>
             </div>
             <div class="component-display">
-              <div class="carousel">
-                <div class="image-container">
-                  <picture>
-                    <img src="images/image-gallery.PNG" alt="accordion"/>
-                  </picture>
+              <div class="carousel image-gallery-carousel">
+                <div class = "dots-container" style="text-align:center">
+                  <span data-dotnum="1" class="dot dot-selected"></span>
+                  <span data-dotnum="2" class="dot dot-selected"></span>
+                  <span data-dotnum="3" class="dot dot-selected"></span>
+                </div>
+                <div id="carousel-container">
+                  <div class="carousel-page fade">
+                    <h2>Image Gallery</h2>
+                    <p>The Image Gallery component uses HTML, CSS and JS to build a working gallery</p>
+                    <ul>
+                      <li><a href="https://plosty.github.io/learning-web-components/gallery/gallery.html">Working Component</a></li>
+                      <li><a href="https://github.com/plosty/learning-web-components/tree/master/gallery/">GitHub Code Repo</a></li>
+                    </ul>
+                  </div>
+                  <div class="carousel-page fade">
+                    <div class="image-text">1: Initial Screen</div>
+                    <img src="images\image-gallery.png" alt="gallery image"/>
+                  </div>
+                  <div class="carousel-page fade">
+                    <div class="image-text">2: Image Gallery in Action</div>
+                    <img src="images\image-gallery.png" alt="gallery image"/>
+                  </div>                    
+                  <a class="prev">&#10094;</a>
+                  <a class="next">&#10095;</a>
+                </div>
+                <div class="component-footer">
+                  <a href="https://plosty.github.io/learning-web-components/gallery/gallery.html" class="component-project-link">Project Link</a>
+                  <a href="https://github.com/plosty/learning-web-components/tree/master/gallery/" class="component-source-link">Project Source on GitHub</a>
                 </div>
               </div>
-              <div class="component-details">
-                <div class="component-details-header">
-                  <h3><em>Technologies:</em> HTML5, CSS3, Vanilla JavaScript</h3>
-                </div>
-                <div class="component-details-text">
-                  <p>An image gallery created using HTML5, CSS styling and JavaScript functionality</p>
-                </div>
-              </div>              
-              <div class="component-footer">
-                <a href="https://plosty.github.io/learning-web-components/gallery/gallery.html" class="component-project-link">Project Link</a>
-                <a href="https://github.com/plosty/learning-web-components/tree/master/gallery/" class="component-source-link">Project Source on GitHub</a>
-              </div>
-            </div>      
-          </div>          
-          <!--  <script src="carousel.js"></script> moved to portfolio.js-->
+            </div>     
+          </div>            
         </div>
       </section>
       <section class="content" id="skills-section">
         <a name="skills-section" class="section-header"></a>
         <h1>Skills</h1>
         <div class="section-description">Range of development skills learnt whilst at the BOV Academy</div>
+        <div class="graphs">        
+          <div class="graph frontend-graph">
+            <div class="graph-title">Frontend Development</div>
+            <div class="graph-top-row">
+              <ul class="graph-scale">
+                <li>Expert</li>
+                <li>Proficient</li>
+                <li>Competent</li>
+                <li>Learning</li>
+              </ul>
+              <ul class="graph-content">
+                <li class="rating javascript-proficiency quarter" data-level="0.25"></li>
+                <li class="rating html-css-proficiency half" data-level="0.25"></li>
+                <li class="rating reactjs-proficiency three-quarter" data-level="0.25"></li>
+                <li class="rating jquery-proficiency full" data-level="0.25"></li>
+              </ul>
+            </div>
+            <div class="graph-bottom-row">
+              <div class="graph-space"></div>
+              <div class="graph-x-axis">
+                <ul>
+                  <li>JavaScript</li>
+                  <li>HTML/CSS</li>
+                  <li>ReactJS</li>
+                  <li>JQuery</li>
+                </ul>
+              </div>
+            </div>         
+          </div>
+          <div class="graph backend-graph">
+            <div class="graph-title">Backend Development</div>
+            <div class="graph-top-row">
+              <ul class="graph-scale">
+                <li>Expert</li>
+                <li>Proficient</li>
+                <li>Competent</li>
+                <li>Learning</li>
+              </ul>
+              <ul class="graph-content">
+                <li class="rating javascript-proficiency quarter" data-level="0.25"></li>
+                <li class="rating html-css-proficiency half" data-level="0.25"></li>
+                <li class="rating reactjs-proficiency three-quarter" data-level="0.25"></li>
+                <li class="rating jquery-proficiency full" data-level="0.25"></li>
+              </ul>
+            </div>
+            <div class="graph-bottom-row">
+              <div class="graph-space"></div>
+              <div class="graph-x-axis">
+                <ul>
+                  <li>JavaScript</li>
+                  <li>HTML/CSS</li>
+                  <li>ReactJS</li>
+                  <li>JQuery</li>
+                </ul>
+              </div>
+            </div>  
+          </div>
+          <div class="graph other-graph">
+            <div class="graph-title">Other Skills</div>
+            <div class="graph-top-row">
+              <ul class="graph-scale">
+                <li>Expert</li>
+                <li>Proficient</li>
+                <li>Competent</li>
+                <li>Learning</li>
+              </ul>
+              <ul class="graph-content">
+                <li class="rating javascript-proficiency quarter" data-level="0.25"></li>
+                <li class="rating html-css-proficiency half" data-level="0.25"></li>
+                <li class="rating reactjs-proficiency three-quarter" data-level="0.25"></li>
+                <li class="rating jquery-proficiency full" data-level="0.25"></li>
+              </ul>
+            </div>
+            <div class="graph-bottom-row">
+              <div class="graph-space"></div>
+              <div class="graph-x-axis">
+                <ul>
+                  <li>JavaScript</li>
+                  <li>HTML/CSS</li>
+                  <li>ReactJS</li>
+                  <li>JQuery</li>
+                </ul>
+              </div>
+            </div>  
+          </div>
+        </div>
       </section>
       <section class="content" id="contact-section">
         <a name="contact-section" class="section-header"></a>
@@ -258,4 +403,5 @@
   </div>
   <footer>&copy; 2017 Phil Losty</footer>
   <script src="portfolio.js"></script>
+  <script src="projects.js"></script>
 </body>
