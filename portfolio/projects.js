@@ -1,5 +1,6 @@
 (function(window) {
- /* Projects section */
+ 
+ /* Projects Section */
   var projectTabs = document.getElementsByClassName("component-list-item");
   var projects = document.getElementsByClassName("component-display");
   var slides = document.getElementsByClassName("carousel-page-selected");  

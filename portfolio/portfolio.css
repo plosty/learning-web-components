@@ -80,11 +80,16 @@ nav .name {
   z-index: 1;
 }
 
-.search-component label {
+.search-component .search-box-label {
   position: absolute;  
   top: 6px;
   left: 10px;
   z-index: -1;
+  transition: all 0.5s ease-in-out;
+}
+
+.search-component .label-moved {
+  top: -3px;
 }
 
 .search-component input {  
