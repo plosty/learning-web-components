@@ -40,7 +40,7 @@ nav {
 nav .name {
   color: white;
   margin: 0px;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 .nav-list {
@@ -71,6 +71,39 @@ nav .name {
   background-color: rgb(194, 159, 194);
 }
 
+/* search field */
+.search-component {
+  font-size: 0.5em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.search-component label {
+  position: absolute;  
+  top: 6px;
+  left: 10px;
+  z-index: -1;
+}
+
+.search-component input {  
+  background: transparent;
+  width: 80px;
+  border: none;
+  border-bottom: 1px solid rgb(194, 159, 194);  
+  z-index: 2;
+}
+
+.search-component .search-button {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+
 /* Container-specific section*/
 #content-container {
   margin: auto;
@@ -83,6 +116,10 @@ nav .name {
   padding-left: 5px;
   padding-right: 5px;
   border: 1px solid red; 
+}
+
+.content .content-section-title {
+  margin-top: 100px;
 }
 
 .content h1, h2, h3 {
@@ -199,6 +236,10 @@ nav .name {
   color: rgb(167, 93, 167);
 }
 
+.carousel-page p a {
+  color: rgb(167, 93, 167);
+}
+
 .carousel-page .image-text {
   text-align: center;
   margin: 20px;
@@ -299,6 +340,7 @@ nav .name {
 */
 .graph {
   width: 90%;
+  max-width: 230px;
   padding-top: 20px;
   padding-bottom: 20px;
   display: flex;
@@ -366,7 +408,7 @@ nav .name {
 
 /* manage the bars in the bar graph*/
 .graph-content .rating {
-  width: 15px;
+  width: 25px;
   align-self: flex-end;
 }
 
@@ -383,9 +425,23 @@ nav .name {
 .rating.jquery-proficiency {
   background-color: #FA8CB0;
 }
+.rating.other-one-proficiency {
+  background-color: #9FCE57;
+}
+.rating.other-two-proficiency {
+  background-color: #3DC694;
+}
+.rating.other-three-proficiency {
+  background-color: #4EC1F2;
+}
+.rating.other-four-proficiency {
+  background-color: #8D9EFF;
+}
 
+/* graph heights */
 .rating.none {
-  height: 0;
+  height: 100%;
+  background-color: white;
 }
 
 .rating.quarter {
@@ -403,6 +459,54 @@ nav .name {
 .rating.full {
   height: 100%;
 }
+
+
+/* Tooltop Functionality */
+ /* Tooltip container */
+ .tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+} 
 
 
 /* About Page */
