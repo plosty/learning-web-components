@@ -7,25 +7,42 @@
   
 </head>
 <body>
-  <nav> 
-    <h1 class="name">Phil Losty</h1>
-    <ul class="nav-list">
-      <li class="section-link active"><a href="#about-section">About</a></li>
-      <li class="section-link"><a href="#projects-section">Projects</a></li>
-      <li class="section-link"><a href="#skills-section">Skills</a></li>
-      <li class="section-link"><a href="#contact-section">Contact</a></li>
-    </ul>
-    <div class="search-component">
-      <label class="search-box-label" for="search-box">SEARCH</label>
-      <input class="search-box" name="search-box" type="text"/>
-      <img class="search-button" src="images/search-logo.png" alt="search logo" height="12px"/>
+  <nav>
+    <div class="narrow-nav-menu">
+      <div id="narrow-nav-header">
+        <img class="hamburger-icon" src="images/hamburger.png" alt="hamburger icon" height="40px"/>
+      </div>
+      <div class="narrow-dropdown-menu">
+        <h1 class="name">Phil Losty</h1>
+        <ul>
+          <li class="hamburger-section-link"><a href="#about-section">About</a></li>
+          <li class="hamburger-section-link"><a href="#projects-section">Projects</a></li>
+          <li class="hamburger-section-link"><a href="#skills-section">Skills</a></li>
+          <li class="hamburger-section-link"><a href="#contact-section">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <div id="openModal" class="modalDialog">
-      <div>
-        <h2>Search Box</h2>
-        <div class="close-search-modal">X</div>        
-        <p>Searching for:</p>
-        <p class="modal-search-query"></p>
+
+    <div class="wide-nav-menu">
+      <h1 class="name">Phil Losty</h1>
+      <ul class="nav-list">
+        <li class="section-link active"><a href="#about-section">About</a></li>
+        <li class="section-link"><a href="#projects-section">Projects</a></li>
+        <li class="section-link"><a href="#skills-section">Skills</a></li>
+        <li class="section-link"><a href="#contact-section">Contact</a></li>
+      </ul>
+      <div class="search-component">
+        <label class="search-box-label" for="search-box">SEARCH</label>
+        <input class="search-box" name="search-box" type="text"/>
+        <img class="search-button" src="images/search-logo.png" alt="search logo" height="12px"/>
+      </div>
+      <div id="openModal" class="modalDialog">
+        <div>
+          <h2>Search Box</h2>
+          <div class="close-search-modal">X</div>        
+          <p>Searching for:</p>
+          <p class="modal-search-query"></p>
+        </div>
       </div>
     </div>
   </nav>
@@ -38,8 +55,9 @@
         <p>My technical background is mainly in Quality Assurance.</p>
         <p>After initially joining Cap Gemini as a graduate, I joined the support team of a small startup company called Application Networks, who provided financial software to some of the worlds largest investment banks.</p>
         <p>Over the next few years, as the company was bought and merged with Reuters and eventually Misys, I moved more in specialising in Quality Assurance</p>
-        <p>In 2015, I moved away from financial software to become QA manager of a small team at Piriform, the makers of the PC optimisation software CCleaner.</p>
-        <p>As a team, we focus on making sure our much-loved products are performing to the standards demanded by our 2m+ users. We are trying to build up expertise in automated tests to help achieve this</p>
+        <p>In 2015, I moved away from financial software to become QA manager to form a small team at <a href="http://www.piriform.com">Piriform</a>, the makers of the PC optimisation software CCleaner.</p>
+        <p>As a team, we focused on making sure our much-loved products performed to the standards demanded by over 2m users. Automated tests helped to achieve this</p>
+        <p>In 2017 I joined <a href="http://www.v1.co">V1</a>, a new technology consultancy based in San Francisco to focus on building a BDD approach on our development process with our partners.</p>
         <h3>Education</h3>
         <p>My first degree was in Management Science at Warwick Universty. </p>
         <p>Following that, whilst working, I completed my MSc in Computer Science at Birkbeck University, who specialise in part-time study. </p>

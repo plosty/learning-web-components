@@ -28,49 +28,50 @@ footer {
 }
 
 /* navigation bar */
-nav { 
-  border-bottom: 1px solid rgb(194, 159, 194);
-  display: flex;
-  flex-flow: column wrap;
-  text-align: center;
-  align-items: center;
-  top: 0px;
-  z-index: 100;
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
 }
 
 nav .name {
   color: white;
-  margin: 0px;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
-.nav-list {
-  width: 100%;
-  padding: 0px;
-  margin: 0px;
-  list-style: none;
-  display: flex;
-  flex-flow: column wrap;
+nav .wide-nav-menu {
+  display: none;
 }
 
-.nav-list li {  
-  padding-top: 2px;
-  padding-bottom: 2px;  
-  display: block;
-  font-size: 0.8em;
+/* hamburger menu */
+.narrow-nav-menu .hamburger-icon {
+  cursor: pointer;
 }
 
-.nav-list li a{
-  text-decoration: none;
-  color: black;
+.narrow-nav-menu .narrow-nav-header {
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }
 
-.nav-list .active {
+.narrow-nav-menu .narrow-dropdown-menu {
+  text-align: left;
+  border: 1px solid black;
+  max-height: 0;
+}
+
+.narrow-dropdown-menu li:hover {
   background-color: rgb(194, 159, 194);
 }
-.nav-list li:hover {
-  background-color: rgb(194, 159, 194);
+
+.narrow-dropdown-menu.hamburger-menu-displayed {
+  max-height: initial;
 }
+/* end of hamburger menu */
 
 /* search field */
 .search-component {
@@ -175,7 +176,7 @@ nav .name {
 }
 
 .content .content-section-title {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .content h1, h2, h3 {
@@ -201,7 +202,6 @@ nav .name {
   width: 100%;
   margin: 0 auto;
   margin-top: 10px;
-  display: flex;
   font-size: 0.8em;
   height: 100%;
 }
@@ -209,7 +209,7 @@ nav .name {
 /* Components List */
 .components-container .components-list {
   list-style: none;
-  width: 25%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -239,7 +239,7 @@ nav .name {
 
 .components-container .components-display-container {
   background-color: darkgrey;
-  width: 75%;
+  width: 100%;
   position: relative;
   min-height: 300px;
 }
@@ -595,46 +595,240 @@ nav .name {
 
 /* responsive changes */
 @media (min-width: 361px) {
-    /* nav bar changes */
-    nav {
-      flex-flow: column;
-      font-size: 1em;
-      border-bottom: 2px solid rgb(194, 159, 194);
-    }
+  /* nav bar changes */  
+  .nav-list .active {
+    background-color: rgb(194, 159, 194);
+  }
+  .nav-list li:hover {
+    background-color: rgb(194, 159, 194);
+  }
 
-    nav .name {
-      margin: auto;
-      text-align: center;
-      padding: 3px;
-      font-size: 1em;
-    }
+  nav .narrow-nav-menu {
+    display: none;
+  }
 
-    .nav-list {
-      flex-direction: row;
-      justify-content: space-around;
-      width: 100%;
-    }
+   nav .wide-nav-menu {
+    display: block;
+    flex-flow: column;
+    font-size: 1em;
+    border-bottom: 2px solid rgb(194, 159, 194);
+  }
 
-    .nav-list li {
-      width: 25%;
-      text-align: center;
-      padding: 5px;
-    }
+  .wide-nav-menu .name {
+    color: white;
+    margin: auto;
+    text-align: center;
+    padding: 3px;
+    font-size: 1em;
+  }
 
-    .nav-list li a {
-      padding: 0px;
-      font-size: 1em;
-    }
-    /* content changes */
-    .content h1 {
-      font-size: 1em;
-      margin-top: 60px;;
-    }
-    /* footer changes */
-    footer {
-      font-size: 1em;
-      padding: 2px;
-    }
+  .nav-list {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .nav-list li {
+    padding-top: 2px;
+    padding-bottom: 2px;  
+    display: block;
+    width: 25%;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .nav-list li a {
+    text-decoration: none;
+    color: black;
+    padding: 0px;
+    font-size: 1em;
+  }
+
+  /* content changes */
+  .content h1 {
+    font-size: 1em;
+    margin-top: 60px;;
+  }
+  /* footer changes */
+  footer {
+    font-size: 1em;
+    padding: 2px;
+  }
+
+  /* Projects Page - menu on left of container*/
+  .components-container {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+    font-size: 0.8em;
+    height: 100%;
+  }
+
+  /* Components List */
+  .components-container .components-list {
+    list-style: none;
+    width: 25%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .components-container .component-list-item {
+    text-decoration: none;
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .components-container .component-list-item:hover {
+    border-right: 2px solid rgb(167, 93, 167);
+  }
+
+  /* Component Container */
+  .components-container .selected-component {
+    background: darkgrey;
+    color: rgb(167, 93, 167);
+    font-weight: 400;
+  }
+
+  .components-container .components-display-container {
+    background-color: darkgrey;
+    width: 75%;
+    position: relative;
+    min-height: 300px;
+  }
+
+  .components-display-container .component-display {
+    min-height: 300px;
+    position: absolute;
+    opacity: 0;  
+  }
+
+  .components-display-container .selected-component {
+    opacity: 1;
+    z-index: 50;
+  }
+
+  /* Carousel settings */
+  .component-display .carousel {
+    width: 90%;
+    margin: 10px;
+  }
+
+  .carousel h2{
+    text-align: center;
+  }
+
+  .carousel img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .carousel-container {
+    max-width: 800px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .carousel-page {
+      display: none;
+      position: relative;
+      margin: 0 auto;
+  }
+
+  .carousel-page ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .carousel-page ul a {
+    color: rgb(167, 93, 167);
+  }
+
+  .carousel-page p a {
+    color: rgb(167, 93, 167);
+  }
+
+  .carousel-page .image-text {
+    text-align: center;
+    margin: 20px;
+    font-size: 1.2em;
+  }
+
+  .carousel-page img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 200px;
+    width: auto;
+    margin-top: -22px;
+    padding: 6px;
+    color: black;
+    background-color: rgba(100,100,100,0.2);
+    font-weight: bold;
+    font-size: 10px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor:pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  /* Component Footer */
+  .components-container .component-footer {
+    position: absolute;
+    bottom: 0px;
+    padding-top: 10px;
+  }
+
+  .component-footer a {
+    text-decoration: none;
+    font-size: 0.7em;
+  }
+
+  .component-footer .component-project-link {
+    color: rgb(110, 110, 247);
+  }
+
+  .component-footer .component-source-link {
+    color: rgb(112, 109, 109);
+  }
 }
 
 @media (min-width: 601px) {
