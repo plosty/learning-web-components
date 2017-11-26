@@ -13,9 +13,6 @@ for (var i=0; i<hamburgerLinks.length; i++) {
   });
 }
 
-
-
-
 /* Main site navigation */
 var headerSections = document.getElementsByClassName("section-link");
 
@@ -33,3 +30,27 @@ function openSection() {
     }
   }
 }
+
+/* projects accordion navigation */
+var accordion = (function(window) {
+  var accordion = {};
+
+  var menuLinks = document.getElementsByClassName("ac-label");
+  for (i=0; i<menuLinks.length; i++) {
+    menuLinks[i].addEventListener("click", toggleSection);
+  }
+
+  function toggleSection() {
+    var menuHeader = this;
+    if (menuHeader.classList.contains("selected")){
+      menuHeader.className = "ac-label";
+      menuHeader.nextElementSibling.className = "project-content";
+    }
+    else {
+      menuHeader.className = "ac-label selected";
+      menuHeader.nextElementSibling.className = "project-content active";
+    }
+  }
+
+  return accordion;
+})(window)
