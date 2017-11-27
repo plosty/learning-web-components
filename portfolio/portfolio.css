@@ -28,14 +28,9 @@ footer {
 }
 
 /* navigation bar */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
 nav a {
   text-decoration: none;
+  color: black;
 }
 
 nav .name {
@@ -82,7 +77,7 @@ nav .wide-nav-menu {
 }
 
 .search-component .search-box-label {
-  position: absolute;  
+  position: absolute;
   top: 6px;
   left: 10px;
   z-index: -1;
@@ -93,11 +88,11 @@ nav .wide-nav-menu {
   top: -10px;
 }
 
-.search-component input {  
+.search-component input {
   background: transparent;
   width: 80px;
   border: none;
-  border-bottom: 1px solid rgb(194, 159, 194);  
+  border-bottom: 1px solid rgb(194, 159, 194);
   z-index: 2;
 }
 
@@ -130,7 +125,7 @@ nav .wide-nav-menu {
   position: absolute;
   right: 5px;
   top: 10px;
-  cursor: pointer; 
+  cursor: pointer;
   width: 25px;
   height: 25px;
   pointer-events: auto;
@@ -172,11 +167,11 @@ nav .wide-nav-menu {
   max-height: 100%;
   padding-left: 5px;
   padding-right: 5px;
-  border: 1px solid red; 
+  border: 1px solid red;
 }
 
 .content .content-section-title {
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .content h1, h2, h3 {
@@ -186,7 +181,7 @@ nav .wide-nav-menu {
   font-weight: 400;
 }
 
-.content .section-description {  
+.content .section-description {
   text-align: center;
   font-size: 0.8em;
 }
@@ -207,8 +202,8 @@ nav .wide-nav-menu {
 }
 
 /* Components List */
-/* narrow-view */ 
-.narrow-components-container {  
+/* narrow-view */
+.narrow-components-container {
   width: 100%;
   margin: 0;
   margin-top: 10px;
@@ -387,7 +382,7 @@ nav .wide-nav-menu {
 .components-display-container .component-display {
   min-height: 300px;
   position: absolute;
-  opacity: 0;  
+  opacity: 0;
 }
 
 .components-display-container .selected-component {
@@ -576,7 +571,7 @@ nav .wide-nav-menu {
   padding: 0;
 }
 
-/* each graph consists of three rows: 
+/* each graph consists of three rows:
   title
   top row (scale and content)
   bottom row (x-axis values)
@@ -620,14 +615,14 @@ nav .wide-nav-menu {
 .graph .graph-content {
   width: 75%;
   display: flex;
-  justify-content: space-around;  
+  justify-content: space-around;
 }
 
 /* edit the bottom row (x-axis) of the graph */
 .graph .graph-bottom-row {
   width: 100%;
   display: flex;
-  flex-direction: row;  
+  flex-direction: row;
   font-size: 0.7em;
 }
 
@@ -647,7 +642,7 @@ nav .wide-nav-menu {
   transform: rotate(45deg);
   padding-top: 10px;
   padding-bottom: 10px;
-} 
+}
 
 /* manage the bars in the bar graph*/
 .graph-content .rating {
@@ -749,7 +744,7 @@ nav .wide-nav-menu {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
-} 
+}
 
 
 /* About Page */
@@ -780,9 +775,11 @@ nav .wide-nav-menu {
 }
 
 
-/* responsive changes */
+/*
+ * Responsive Changes - Medium Width
+ */
 @media (min-width: 361px) {
-  /* nav bar changes */  
+  /* nav bar changes */
   .nav-list .active {
     background-color: rgb(194, 159, 194);
   }
@@ -794,7 +791,7 @@ nav .wide-nav-menu {
     display: none;
   }
 
-   nav .wide-nav-menu {
+  nav .wide-nav-menu {
     display: block;
     flex-flow: column;
     font-size: 1em;
@@ -809,22 +806,25 @@ nav .wide-nav-menu {
     font-size: 1em;
   }
 
-  .nav-list {
-    flex-direction: row;
-    justify-content: space-around;
+  .wide-nav-menu .nav-list {
     width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
   }
 
-  .nav-list li {
+  .wide-nav-menu .nav-list li {
     padding-top: 2px;
-    padding-bottom: 2px;  
+    padding-bottom: 2px;
     display: block;
     width: 25%;
     text-align: center;
     padding: 5px;
   }
 
-  .nav-list li a {
+  .wide-nav-menu .nav-list li a {
     text-decoration: none;
     color: black;
     padding: 0px;
@@ -832,9 +832,14 @@ nav .wide-nav-menu {
   }
 
   /* content changes */
+  .content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   .content h1 {
-    font-size: 1em;
-    margin-top: 60px;;
+    font-size: 1.2em;
+    margin-top: 60px;
   }
   /* footer changes */
   footer {
@@ -846,7 +851,7 @@ nav .wide-nav-menu {
   .narrow-components-container {
     display: none;
   }
-  
+
   .components-container {
     width: 100%;
     margin: 0 auto;
@@ -897,7 +902,7 @@ nav .wide-nav-menu {
   .components-display-container .component-display {
     min-height: 300px;
     position: absolute;
-    opacity: 0;  
+    opacity: 0;
   }
 
   .components-display-container .selected-component {
@@ -1022,15 +1027,20 @@ nav .wide-nav-menu {
   }
 }
 
+/*
+ * Wide Screen design
+ */
 @media (min-width: 601px) {
   /* nav bar changes */
-  nav {
+  nav .wide-nav-menu {
     border-bottom: 5px solid rgb(194, 159, 194);
+    display: flex;
     flex-direction: row;
   }
 
-  nav .name {
+  .wide-nav-menu .name {
     font-size: 1.3em;
+    text-align: left;
     margin: 0px;
     padding: 0px;
     padding-left: 20px;
@@ -1038,11 +1048,11 @@ nav .wide-nav-menu {
     padding-top: 5px;
   }
 
-  .nav-list {
+  .wide-nav-menu .nav-list {
     width: initial;
   }
 
-  .nav-list li {    
+  .nav-list li {
     font-size: 1.2em;
     width: initial;
     padding: 10px;
@@ -1065,11 +1075,3 @@ nav .wide-nav-menu {
     padding: 5px;
   }
 }
-
-
-
-
-
-
-
-
