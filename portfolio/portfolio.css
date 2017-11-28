@@ -973,7 +973,6 @@ nav .name {
   .carousel-page p {
     text-align: center;
     font-size: 1em;
-    padding: 20px;
   }
 
   .carousel-page p a {
@@ -1150,7 +1149,7 @@ nav .name {
   }
 
   .components-display-container .component-display {
-    min-height: 600px;
+    min-height: 650px;
   }
 
   .carousel-container {
