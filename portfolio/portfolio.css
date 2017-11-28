@@ -266,30 +266,6 @@ nav .name {
   display: none;
 }
 
-/* components-container only for larger screen */
-.components-container .components-list {
-  list-style: none;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.components-container .component-list-item {
-  text-decoration: none;
-  font-size: 0.8em;
-  margin: 0;
-  padding: 0;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-}
-
-.components-container .component-list-item:hover {
-  border-right: 2px solid rgb(167, 93, 167);
-}
-
 /* narrow page */
 .narrow-carousel h2{
   text-align: center;
@@ -305,6 +281,8 @@ nav .name {
   margin: 0 auto;
   min-height: 450px;
   padding: 5px;
+  background: darkgrey;
+  color: #A75DA7;
 }
 
 .narrow-carousel .narrow-dots-container {
@@ -328,12 +306,9 @@ nav .name {
   padding: 0;
 }
 
-.narrow-carousel-page ul a {
-  color: rgb(94, 21, 94);
-}
-
-.narrow-carousel-page p a {
-  color: rgb(94, 21, 94);
+.narrow-carousel-page a {
+  color: #A75DA7;
+  font-size: 0.8em;
 }
 
 .narrow-carousel-page .image-text {
@@ -363,31 +338,6 @@ nav .name {
 
 .narrow-component-footer .component-source-link {
   color: white;
-}
-
-/* Component Container */
-.components-container .selected-component {
-  background: darkgrey;
-  color: rgb(167, 93, 167);
-  font-weight: 400;
-}
-
-.components-container .components-display-container {
-  background-color: darkgrey;
-  width: 100%;
-  position: relative;
-  min-height: 300px;
-}
-
-.components-display-container .component-display {
-  min-height: 300px;
-  position: absolute;
-  opacity: 0;
-}
-
-.components-display-container .selected-component {
-  opacity: 1;
-  z-index: 50;
 }
 
 /* Next & previous buttons */
@@ -432,103 +382,6 @@ nav .name {
 
 .narrow-dot.active, .narrow-dot:hover {
   background-color: rgb(199, 147, 199);
-}
-
-/* Carousel settings */
-/* wider-pages */
-.component-display .carousel {
-  width: 90%;
-  margin: 10px;
-}
-
-.carousel h2{
-  text-align: center;
-}
-
-.carousel img {
-  width: 100%;
-  object-fit: cover;
-}
-
-.carousel-container {
-  max-width: 800px;
-  position: relative;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.carousel-page {
-    display: none;
-    position: relative;
-    margin: 0 auto;
-}
-
-.carousel-page ul {
-  list-style: none;
-  padding: 0;
-}
-
-.carousel-page ul a {
-  color: rgb(167, 93, 167);
-}
-
-.carousel-page p a {
-  color: rgb(167, 93, 167);
-}
-
-.carousel-page .image-text {
-  text-align: center;
-  margin: 20px;
-  font-size: 1.2em;
-}
-
-.carousel-page img {
-  display: block;
-  margin: 0 auto;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 200px;
-  width: auto;
-  margin-top: -22px;
-  padding: 6px;
-  color: black;
-  background-color: rgba(100,100,100,0.2);
-  font-weight: bold;
-  font-size: 10px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-  color: white;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor:pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
 }
 
 /* Component Footer */
@@ -870,8 +723,155 @@ nav .name {
     font-size: 1em;
     padding: 2px;
   }
+  
 
-  /* Projects Page - menu on left of container*/
+  /* components-container only for larger screen */
+  .components-container .components-list {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .components-container .component-list-item {
+    text-decoration: none;
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .components-container .component-list-item:hover {
+    border-right: 2px solid rgb(167, 93, 167);
+  }
+
+
+  .components-container .selected-component {
+    background: darkgrey;
+    color: rgb(167, 93, 167);
+    font-weight: 400;
+  }
+
+  .components-container .components-display-container {
+    background-color: darkgrey;
+    width: 100%;
+    position: relative;
+    min-height: 300px;
+  }
+
+  .components-display-container .component-display {
+    min-height: 300px;
+    position: absolute;
+    opacity: 0;
+  }
+
+  .components-display-container .selected-component {
+    opacity: 1;
+    z-index: 50;
+  }
+
+  /* Carousel settings */
+  /* wider-pages */
+  .component-display .carousel {
+    width: 90%;
+    margin: 10px;
+  }
+
+  .carousel h2{
+    text-align: center;
+  }
+
+  .carousel img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .carousel-container {
+    max-width: 800px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .carousel-page {
+      display: none;
+      position: relative;
+      margin: 0 auto;
+  }
+
+  .carousel-page ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .carousel-page ul a {
+    color: rgb(167, 93, 167);
+  }
+
+  .carousel-page p a {
+    color: rgb(167, 93, 167);
+  }
+
+  .carousel-page .image-text {
+    text-align: center;
+    margin: 20px;
+    font-size: 1.2em;
+  }
+
+  .carousel-page img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 200px;
+    width: auto;
+    margin-top: -22px;
+    padding: 6px;
+    color: black;
+    background-color: rgba(100,100,100,0.2);
+    font-weight: bold;
+    font-size: 10px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor:pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+/* Projects Page - menu on left of container*/
   .narrow-components-container {
     display: none;
   }
