@@ -38,7 +38,7 @@ nav .name {
   font-size: 1.1em;
 }
 
-nav .wide-nav-menu {
+.wide-nav-menu {
   display: none;
 }
 
@@ -435,9 +435,7 @@ nav .wide-nav-menu {
 }
 
 /* Carousel settings */
-
 /* wider-pages */
-
 .component-display .carousel {
   width: 90%;
   margin: 10px;
@@ -557,9 +555,35 @@ nav .wide-nav-menu {
 /* Skills Page */
 
 /* show all graphs in single column */
+.skills-split-bar {
+  margin: 0 auto;
+  margin-top: 25px;
+  height: 15px;
+  font-size: 0.6em;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.skills-split-bar .skills-split-front-end {
+  background-color: rgba(226, 111, 188, 0.973);
+}
+
+.skills-split-bar .skills-split-back-end {
+  background-color: lightblue;
+}
+
 .graphs {
   width: 100%;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.graphs .dev-skills-graphs {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -787,11 +811,11 @@ nav .wide-nav-menu {
     background-color: rgb(194, 159, 194);
   }
 
-  nav .narrow-nav-menu {
+  .narrow-nav-menu {
     display: none;
   }
 
-  nav .wide-nav-menu {
+  .wide-nav-menu {
     display: block;
     flex-flow: column;
     font-size: 1em;
@@ -855,7 +879,7 @@ nav .wide-nav-menu {
   .components-container {
     width: 100%;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 25px;
     display: flex;
     font-size: 0.8em;
     height: 100%;
@@ -885,7 +909,8 @@ nav .wide-nav-menu {
     border-right: 2px solid rgb(167, 93, 167);
   }
 
-  /* Component Container */
+  
+  /* Projects page */
   .components-container .selected-component {
     background: darkgrey;
     color: rgb(167, 93, 167);
@@ -896,11 +921,12 @@ nav .wide-nav-menu {
     background-color: darkgrey;
     width: 75%;
     position: relative;
-    min-height: 300px;
+    min-height: 500px;
   }
 
   .components-display-container .component-display {
-    min-height: 300px;
+    width: 100%;
+    min-height: 500px;
     position: absolute;
     opacity: 0;
   }
@@ -912,17 +938,13 @@ nav .wide-nav-menu {
 
   /* Carousel settings */
   .component-display .carousel {
-    width: 90%;
-    margin: 10px;
+    width: 100%;
+    margin: 0px;
   }
 
   .carousel h2{
+    font-size: 1.5em;
     text-align: center;
-  }
-
-  .carousel img {
-    width: 100%;
-    object-fit: cover;
   }
 
   .carousel-container {
@@ -943,8 +965,15 @@ nav .wide-nav-menu {
     padding: 0;
   }
 
-  .carousel-page ul a {
+  .carousel-page ul li {
     color: rgb(167, 93, 167);
+    text-align: center;
+  }
+
+  .carousel-page p {
+    text-align: center;
+    font-size: 1em;
+    padding: 20px;
   }
 
   .carousel-page p a {
@@ -959,6 +988,8 @@ nav .wide-nav-menu {
 
   .carousel-page img {
     display: block;
+    width: 100%;
+    object-fit: cover;
     margin: 0 auto;
   }
 
@@ -991,6 +1022,11 @@ nav .wide-nav-menu {
   }
 
   /* The dots/bullets/indicators */
+
+  .dots-container {
+    padding-top: 5px;
+  }
+
   .dot {
     cursor:pointer;
     height: 15px;
@@ -1025,6 +1061,13 @@ nav .wide-nav-menu {
   .component-footer .component-source-link {
     color: rgb(112, 109, 109);
   }
+
+  /* Skills Page */
+  .skills-split-bar {
+    max-width: 300px;
+    height: 15px;
+    font-size: 0.7em;
+  }
 }
 
 /*
@@ -1032,7 +1075,7 @@ nav .wide-nav-menu {
  */
 @media (min-width: 601px) {
   /* nav bar changes */
-  nav .wide-nav-menu {
+  .wide-nav-menu {
     border-bottom: 5px solid rgb(194, 159, 194);
     display: flex;
     flex-direction: row;
@@ -1042,32 +1085,101 @@ nav .wide-nav-menu {
     font-size: 1.3em;
     text-align: left;
     margin: 0px;
-    padding: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 5px;
+    padding: 15px;
   }
 
   .wide-nav-menu .nav-list {
     width: initial;
   }
 
-  .nav-list li {
+  .wide-nav-menu .nav-list li {
     font-size: 1.2em;
-    width: initial;
-    padding: 10px;
+    width: auto;
+    min-width: 0;
+    padding: 15px;
     margin: 0px;
   }
 
-  .nav-list li a {
-    padding: 10px;
+  .wide-nav-menu .nav-list li a {
+    padding: 0px;
+  }
+
+  .search-component {
+    font-size: 0.6em;
+    top: 10px;
+    right: 10px;
+  }
+
+  .search-component .search-box-label {
+    top: 2px;
+  }
+
+  .search-component input {
+    width: 100px;
   }
 
   /* content changes */
-  .content h1 {
-    margin-top: 60px;
+  #content-container {
+    min-width: 601px;
+    max-width: 1000px;
+  }
+
+  .content .content-section-title {
+    margin-top: 65px;
     font-size: 2em;
   }
+
+  .content h1, h2, h3 {
+    font-size: 1.6em;
+    line-height: 1.6em;
+  }
+
+  /* Components page */
+  .components-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .components-container .component-list-item {
+    font-size: 1em;
+    padding: 8px;
+  }
+
+  .components-display-container .component-display {
+    min-height: 600px;
+  }
+
+  .carousel-container {
+    max-width: 500px;
+  }
+
+  .carousel-page .long-image {
+    max-width: 400px;
+  }
+
+  .component-footer a {
+    font-size: 1em;
+  }
+
+  /* Skills page */
+  .skills-split-bar {    
+    max-width: 450px;
+  }
+
+  .graphs .dev-skills-graphs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .dev-skills-graphs .graph {
+    margin: 25px;
+  }
+
 
   /* footer changes */
   footer {
