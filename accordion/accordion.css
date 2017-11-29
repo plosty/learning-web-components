@@ -1,9 +1,9 @@
+body{
+  background-color: rgba(0, 0, 0, 0);
+}
 .ac-container {
-  width: 550px;
-  padding: 10px;
-  border: 1px solid rgb(48, 6, 7);
-  border-radius: 10px;
   font-family: 'Montserrat', 'Arial Narrow', Arial, sans-serif;
+  padding: 0;
 }
 .ac-container li {
   list-style: none;
@@ -23,6 +23,7 @@
   cursor: pointer;
   background: #e25e2d;
   color: black;
+  font-size: 0.9em;
 }
 .ac-menu-section label:hover {
   background: #f27b4f;
@@ -45,7 +46,7 @@
   margin-left: 5px;
 }
 .content.active {
-  height: 250px;
+  height: 150px;
 }
 .content .menu-item {
   padding: 10;
@@ -53,11 +54,49 @@
   text-align: left;
 }
 .content h2 {
-  font-size: 1em;
-}
-.content h3 {
   font-size: 0.8em;
 }
+.content h3 {
+  font-size: 0.7em;
+}
 .content .menu-item {
-  font-size: 0.75em;
+  font-size: 0.65em;
+}
+
+@media (min-width: 361px) {
+  .ac-menu-section label {
+    font-size: 1.3em;
+  }
+
+  .content h2 {
+    font-size: 1em;
+  }
+  .content h3 {
+    font-size: 0.9em;
+  }
+  .content .menu-item {
+    font-size: 0.8em;
+  }
+  
+  .content.active {
+    height: 250px;
+  }
+
+
+}
+
+@media (min-width: 601px) {
+  .ac-menu-section label {
+    font-size: 1.5em;
+  }
+
+  .content h2 {
+    font-size: 1.2em;
+  }
+  .content h3 {
+    font-size: 1em;
+  }
+  .content .menu-item {
+    font-size: 0.9em;
+  }
 }

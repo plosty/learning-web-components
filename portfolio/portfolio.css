@@ -202,6 +202,12 @@ nav .name {
 }
 
 /* Components List */
+
+/* only display the larger container for the wider screens*/
+.components-container {
+  display: none;
+}
+
 /* narrow-view */
 .narrow-components-container {
   width: 100%;
@@ -259,11 +265,6 @@ nav .name {
 .narrow-components-container .narrow-project-content.active {
   min-height: 450px;
   height: 100%;
-}
-
-/* only display the larger container for the wider screens*/
-.components-container {
-  display: none;
 }
 
 /* narrow page */
@@ -382,6 +383,12 @@ nav .name {
 
 .narrow-dot.active, .narrow-dot:hover {
   background-color: rgb(199, 147, 199);
+}
+
+.working-component {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
 }
 
 /* Component Footer */
@@ -1040,6 +1047,10 @@ nav .name {
   .active, .dot:hover {
     background-color: #717171;
   }
+  
+  .working-component {
+    min-height: 400px;
+  }
 
   /* Component Footer */
   .components-container .component-footer {
@@ -1155,7 +1166,7 @@ nav .name {
   }
 
   .components-display-container .component-display {
-    min-height: 650px;
+    min-height: 750px;
   }
 
   .components-display-container .component-display .dots-container {
@@ -1186,6 +1197,10 @@ nav .name {
 
   .carousel-page .long-image {
     max-width: 400px;
+  }
+
+  .working-component {
+    min-height: 600px;
   }
 
   .component-footer a {
