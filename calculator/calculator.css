@@ -5,15 +5,15 @@ body{
   box-sizing: border-box;
 }
 .calc-frame {
+  padding: 0;
   overflow: hidden;
   border: 0px solid blue;
-  width: 350px;
+  max-width: 600px;
   font-family: 'Fredericka the Great', cursive;
-  font-size: 40px;
+  font-size: 1em;
   color: rgb(232, 244, 53);
 }
-.calc-functionality {
-}
+
 .display {
   text-align: right;
   width: 100%;
@@ -22,7 +22,7 @@ body{
   font-family: inherit;
   font-size: inherit;
   border: 1px solid #52518B;
-  height: 65px;
+  height: 45px;
 }
 .button-panel {
   border: 1px solid blue;
@@ -32,7 +32,7 @@ body{
 }
 input[type=button] {
   border: 1px solid rgb(76, 239, 236);
-  height: 75px;
+  height: 45px;
 }
 .calc-button {
   background-color: rgb(5, 175, 172);
@@ -58,4 +58,25 @@ input[type=button] {
 }
 .calc-operation-button:active {
   background-color: rgb(5, 175, 172);
+}
+
+@media (min-width: 361px) {
+  .calc-frame {
+    font-size: 2em;
+  }
+
+  input[type=button], .display {
+    height: 60px;
+  }
+
+}
+
+@media (min-width: 601px) {
+    .calc-frame {
+      font-size: 3em;
+    }
+  
+    input[type=button], .display {
+      height: 80px;
+    }
 }

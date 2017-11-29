@@ -60,7 +60,7 @@ for (i=0; i<nextArrows.length; i++) {
     var currentPageNum = parseInt(activeDots[0].getAttribute("data-dotnum")); 
 
     
-    var nextPageNum = currentPageNum === pageCount - 1 ? 0 : currentPageNum + 1;
+    var nextPageNum = currentPageNum === pageCount - 1 ? 0 : currentPageNum + 1; 
 
     for (var i=0; i<pageCount; i++) {
       if (i===nextPageNum) {
