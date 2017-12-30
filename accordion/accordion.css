@@ -4,6 +4,7 @@ body{
 .ac-container {
   font-family: 'Montserrat', 'Arial Narrow', Arial, sans-serif;
   padding: 0;
+  max-width: 800px;
 }
 .ac-container li {
   list-style: none;

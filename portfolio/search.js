@@ -26,7 +26,10 @@ function moveSearchLabel() {
 }
 
 function returnSearchLabel() {
-  searchLabel[0].className = "search-box-label";
+  console.log(searchBox[0].value);
+  if (searchBox[0].value === '') {
+    searchLabel[0].className = "search-box-label";
+  }
 }
 
 function searchSite() {

@@ -92,6 +92,7 @@ nav .name {
   background: transparent;
   width: 80px;
   border: none;
+  outline: 0;
   border-bottom: 1px solid rgb(194, 159, 194);
   z-index: 2;
 }
@@ -296,6 +297,7 @@ nav .name {
   position: relative;
   margin: 0 auto;
   margin-bottom: 10px;
+  padding: 10px;
 }
 
 .narrow-carousel-page.narrow-carousel-page-selected {
@@ -994,7 +996,7 @@ nav .name {
 
   .carousel-page img {
     display: block;
-    width: 100%;
+    width: 90%;
     object-fit: cover;
     margin: 0 auto;
   }
@@ -1055,13 +1057,15 @@ nav .name {
   /* Component Footer */
   .components-container .component-footer {
     position: absolute;
-    bottom: 0px;
-    padding-top: 10px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
   }
 
   .component-footer a {
     text-decoration: none;
-    font-size: 0.7em;
+    font-size: 1.1em;
+    padding: 5px;
   }
 
   .component-footer .component-project-link {
@@ -1115,8 +1119,8 @@ nav .name {
   }
 
   .search-component {
-    font-size: 0.6em;
-    top: 10px;
+    font-size: 0.8em;
+    top: 15px;
     right: 10px;
   }
 
@@ -1125,7 +1129,11 @@ nav .name {
   }
 
   .search-component input {
-    width: 100px;
+    width: 120px;
+  }
+
+  .search-component .search-box-label.label-moved {
+    top: -20px;
   }
 
   /* content changes */
@@ -1166,7 +1174,7 @@ nav .name {
   }
 
   .components-display-container .component-display {
-    min-height: 750px;
+    min-height: 700px;
   }
 
   .components-display-container .component-display .dots-container {
@@ -1204,7 +1212,7 @@ nav .name {
   }
 
   .component-footer a {
-    font-size: 1em;
+    font-size: 1.4em;
   }
 
   /* Skills page */
