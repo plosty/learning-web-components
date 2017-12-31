@@ -1,0 +1,138 @@
+/* search field */
+.search-component {
+  font-size: 0.5em;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.search-component .search-box-label {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  z-index: -1;
+  transition: all 0.5s ease-in-out;
+}
+
+.search-component .search-box-label.label-moved {
+  top: -10px;
+}
+
+.search-component input {
+  background: transparent;
+  width: 80px;
+  border: none;
+  outline: 0;
+  border-bottom: 1px solid rgb(194, 159, 194);
+  z-index: 2;
+}
+
+.search-component .search-button {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+/* search results modal box */
+.modalDialog {
+	position: fixed;
+	top: 20px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog .close-search-modal {
+  font-size: 20px;
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  pointer-events: auto;
+}
+
+.modalDialog.modalDialogActive {
+  opacity: 1;
+}
+
+.modalDialog > div {
+  width: 80%;
+  min-height: 30%;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	background: rgb(198, 182, 198);
+	background: -moz-linear-gradient(rgb(198, 182, 198));
+	background: -webkit-linear-gradient(rgb(198, 182, 198));
+	background: -o-linear-gradient(rgb(198, 182, 198));
+}
+
+.modalDialog div h2 {
+  font-size: 1.8em;
+  text-decoration: underline;
+}
+
+.modalDialog .modal-search-query {
+  font-size: 1.6em;
+}
+
+@media (min-width: 601px) {
+  .search-component {
+    font-size: 0.8em;
+    top: 15px;
+    right: 10px;
+  }
+
+  .search-component .search-box-label {
+    top: 2px;
+  }
+
+  .search-component input {
+    width: 100px;
+  }
+
+  .search-component .search-box-label.label-moved {
+    top: -20px;
+  }
+}
+
+@media (min-width: 631px) {
+  .search-component input {
+    width: 120px;
+  }
+}
+
+@media (min-width: 701px) {
+  .search-component input {
+    width: 130px;
+  }
+}
+
+@media (min-width: 801px) {
+  .search-component input {
+    width: 140px;
+  }
+}
+
+@media (min-width: 901px) {
+  .search-component input {
+    width: 150px;
+  }
+}
+
+@media (min-width: 1001px) {
+  .search-component input {
+    width: 175px;
+  }
+}

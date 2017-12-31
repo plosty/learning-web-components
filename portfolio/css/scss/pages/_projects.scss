@@ -1,0 +1,621 @@
+/* Projects Page */
+.components-container {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-size: 0.8em;
+  height: 100%;
+}
+
+/* Components List */
+
+/* only display the larger container for the wider screens*/
+.components-container {
+  display: none;
+}
+
+/* narrow-view */
+.narrow-components-container {
+  width: 100%;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.narrow-components-container .ac-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.narrow-components-container .ac-container li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.narrow-components-container .ac-container .ac-menu-section {
+  margin-bottom: 1px;
+}
+
+.narrow-components-container .ac-menu-section label {
+  padding: 5px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  background: rgb(198, 182, 198);
+  color: black;
+}
+
+.narrow-components-container .ac-menu-section label:hover {
+  background: #A75DA7;
+}
+
+.narrow-components-container .ac-menu-section input {
+  display: none;
+}
+
+.narrow-components-container .ac-menu-section .selected {
+  background: #A75DA7;
+  color: white;
+}
+
+.narrow-components-container .ac-menu-section .narrow-project-content {
+  overflow: hidden;
+  height: 0px;
+  position: relative;
+  transition: 0.3s all;
+}
+
+.narrow-components-container .narrow-project-content.active {
+  min-height: 450px;
+  height: 100%;
+}
+
+/* narrow page */
+.narrow-carousel h2{
+  text-align: center;
+}
+
+.narrow-carousel img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.narrow-carousel {
+  position: relative;
+  margin: 0 auto;
+  min-height: 450px;
+  padding: 5px;
+  background: darkgrey;
+  color: #A75DA7;
+}
+
+.narrow-carousel .narrow-dots-container {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.narrow-carousel-page {
+  display: none;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.narrow-carousel-page.narrow-carousel-page-selected {
+  display: block;
+}
+
+.narrow-carousel-page ul {
+  list-style: none;
+  padding: 0;
+}
+
+.narrow-carousel-page a {
+  color: #A75DA7;
+  font-size: 0.8em;
+}
+
+.narrow-carousel-page .image-text {
+  text-align: center;
+  margin: 20px;
+  font-size: 1.2em;
+}
+
+.narrow-carousel-page img {
+  display: block;
+  margin: 0 auto;
+}
+
+.narrow-components-container .narrow-component-footer {
+  position: absolute;
+  bottom: 0px;
+}
+
+.narrow-component-footer a {
+  text-decoration: none;
+  font-size: 0.7em;
+}
+
+.narrow-component-footer .component-project-link {
+  color: blue;
+}
+
+.narrow-component-footer .component-source-link {
+  color: white;
+}
+
+/* Next & previous buttons */
+.narrow-prev, .narrow-next {
+  cursor: pointer;
+  position: absolute;
+  top: 200px;
+  width: auto;
+  margin-top: -22px;
+  padding: 6px;
+  color: black;
+  background-color: rgba(100,100,100,0.2);
+  font-weight: bold;
+  font-size: 10px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.narrow-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.narrow-prev:hover, .narrow-next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dots/bullets/indicators */
+.narrow-dot {
+  cursor:pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.narrow-dot.active, .narrow-dot:hover {
+  background-color: rgb(199, 147, 199);
+}
+
+.working-component {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+
+/* Component Footer */
+.components-container .component-footer {
+  position: absolute;
+  bottom: 0px;
+  padding-top: 10px;
+}
+
+.component-footer a {
+  text-decoration: none;
+  font-size: 0.7em;
+}
+
+.component-footer .component-project-link {
+  color: rgb(110, 110, 247);
+}
+
+.component-footer .component-source-link {
+  color: rgb(112, 109, 109);
+}
+
+@media (min-width: 361px) {
+  /* components-container only for larger screen */
+  .components-container .components-list {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .components-container .component-list-item {
+    text-decoration: none;
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .components-container .component-list-item:hover {
+    border-right: 2px solid rgb(167, 93, 167);
+  }
+
+
+  .components-container .selected-component {
+    background: darkgrey;
+    color: rgb(167, 93, 167);
+    font-weight: 400;
+  }
+
+  .components-container .components-display-container {
+    background-color: darkgrey;
+    width: 100%;
+    position: relative;
+    min-height: 300px;
+  }
+
+  .components-display-container .component-display {
+    min-height: 300px;
+    position: absolute;
+    opacity: 0;
+  }
+
+  .components-display-container .selected-component {
+    opacity: 1;
+    z-index: 50;
+  }
+
+  /* Carousel settings */
+  /* wider-pages */
+  .component-display .carousel {
+    width: 90%;
+    margin: 10px;
+  }
+
+  .carousel h2{
+    text-align: center;
+  }
+
+  .carousel img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .carousel-container {
+    max-width: 800px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .carousel-page {
+      display: none;
+      position: relative;
+      margin: 0 auto;
+  }
+
+  .carousel-page ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .carousel-page ul a {
+    color: rgb(167, 93, 167);
+  }
+
+  .carousel-page p a {
+    color: rgb(167, 93, 167);
+  }
+
+  .carousel-page .image-text {
+    text-align: center;
+    margin: 20px;
+    font-size: 1.2em;
+  }
+
+  .carousel-page img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 200px;
+    width: auto;
+    margin-top: -22px;
+    padding: 6px;
+    color: black;
+    background-color: rgba(100,100,100,0.2);
+    font-weight: bold;
+    font-size: 10px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor:pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+/* Projects Page - menu on left of container*/
+  .narrow-components-container {
+    display: none;
+  }
+
+  .components-container {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 25px;
+    display: flex;
+    font-size: 0.8em;
+    height: 100%;
+  }
+
+  /* Components List */
+  .components-container .components-list {
+    list-style: none;
+    width: 25%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .components-container .component-list-item {
+    text-decoration: none;
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .components-container .component-list-item:hover {
+    border-right: 2px solid rgb(167, 93, 167);
+  }
+
+  
+  /* Projects page */
+  .components-container .selected-component {
+    background: darkgrey;
+    color: rgb(167, 93, 167);
+    font-weight: 400;
+  }
+
+  .components-container .components-display-container {
+    background-color: darkgrey;
+    width: 75%;
+    position: relative;
+    min-height: 500px;
+  }
+
+  .components-display-container .component-display {
+    width: 100%;
+    min-height: 500px;
+    position: absolute;
+    opacity: 0;
+  }
+
+  .components-display-container .selected-component {
+    opacity: 1;
+    z-index: 50;
+  }
+
+  /* Carousel settings */
+  .component-display .carousel {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .carousel h2{
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .carousel-container {
+    max-width: 800px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .carousel-page {
+      display: none;
+      position: relative;
+      margin: 0 auto;
+  }
+
+  .carousel-page ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .carousel-page ul li {
+    color: rgb(167, 93, 167);
+    text-align: center;
+  }
+
+  .carousel-page p {
+    text-align: center;
+    font-size: 1em;
+  }
+
+  .carousel-page p a {
+    color: rgb(167, 93, 167);
+  }
+
+  .carousel-page .image-text {
+    text-align: center;
+    margin: 20px;
+    font-size: 1.2em;
+  }
+
+  .carousel-page img, .carousel-page embed {
+    display: block;
+    width: 90%;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 200px;
+    width: auto;
+    margin-top: -22px;
+    padding: 6px;
+    color: black;
+    background-color: rgba(100,100,100,0.2);
+    font-weight: bold;
+    font-size: 10px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+  }
+
+  /* The dots/bullets/indicators */
+
+  .dots-container {
+    padding-top: 5px;
+  }
+
+  .dot {
+    cursor:pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  .working-component {
+    min-height: 400px;
+  }
+
+  /* Component Footer */
+  .components-container .component-footer {
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .component-footer a {
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px;
+  }
+
+  .component-footer .component-project-link {
+    color: rgb(110, 110, 247);
+  }
+
+  .component-footer .component-source-link {
+    color: rgb(112, 109, 109);
+  }
+}
+
+@media (min-width: 601px) {
+  .components-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .components-container .component-list-item {
+    font-size: 1em;
+    padding: 8px;
+  }
+
+  .components-display-container .component-display {
+    min-height: 700px;
+  }
+
+  .components-display-container .component-display .dots-container {
+    padding-top: 20px;
+  }
+
+  .carousel-container {
+    max-width: 500px;
+  }
+
+  .carousel-page h2 {
+    font-size: 2em;
+    border-top: 0;
+  }
+
+  .carousel-page p {
+    border-top: 20px;
+    max-width: 500px;
+    font-size: 1.3em;
+    margin: 0 auto;
+  }
+
+  .carousel-page ul {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 1.2em;
+  }
+
+  .carousel-page .long-image {
+    max-width: 400px;
+  }
+
+  .working-component {
+    min-height: 600px;
+  }
+
+  .component-footer a {
+    font-size: 1.4em;
+  }
+}

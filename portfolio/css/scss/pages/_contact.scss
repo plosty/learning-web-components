@@ -1,0 +1,25 @@
+#contact-section .contact-links {
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-section .contact-link {
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-section .contact-link img {
+  margin: 5px;
+}
+
+#contact-section .contact-link a {
+  text-decoration: none;
+  color: $black;
+  font-size: 0.8em;
+}

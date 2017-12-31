@@ -99,9 +99,6 @@
     }
     slides[slideIndex-1].style.display = "block";
     selectedDots[slideIndex-1].className += " active";
-    console.log("slides.length: " + slides.length);
-    console.log("dots.length: " + selectedDots.length);
-    console.log("slideIndex: " + slideIndex);
   }
 
 })()
