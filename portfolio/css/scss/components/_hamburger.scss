@@ -1,0 +1,25 @@
+
+.narrow-nav-menu .hamburger-icon {
+  cursor: pointer;
+}
+
+.narrow-nav-menu .narrow-nav-header {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.narrow-nav-menu .narrow-dropdown-menu {
+  text-align: left;
+  border: 1px solid $black;
+  max-height: 0;
+}
+
+.narrow-dropdown-menu li:hover {
+  background-color: $lightpurple;
+}
+
+.narrow-dropdown-menu.hamburger-menu-displayed {
+  max-height: initial;
+}
+

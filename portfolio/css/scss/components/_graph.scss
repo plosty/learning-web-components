@@ -1,0 +1,180 @@
+/* each graph consists of three rows:
+  title
+  top row (scale and content)
+  bottom row (x-axis values)
+*/
+.graph {
+  width: 90%;
+  max-width: 230px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.graph .graph-title {
+  text-align: center;
+  font-size: 1em;
+  padding-bottom: 20px;
+}
+
+.graph .graph-top-row {
+  width: 100%;
+  border-bottom: 1px solid $lightgrey;
+  display: flex;
+}
+
+.graph .graph-top-row ul {
+  list-style: none;
+  margin: 0;
+}
+
+.graph-scale {
+  width: 25%;
+  font-size: 0.7em;
+}
+
+.graph-scale li {
+  text-align: right;
+  padding-bottom: 10px;
+}
+
+.graph .graph-content {
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* edit the bottom row (x-axis) of the graph */
+.graph .graph-bottom-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  font-size: 0.7em;
+}
+
+/* the space at the left under the scale */
+.graph-bottom-row .graph-space {
+  width: 25%;
+  min-width: 60px;
+}
+
+.graph-bottom-row .graph-x-axis{
+  width: 75%;
+}
+
+.graph-x-axis li {
+  float: left;
+  width: 25%;
+  transform: rotate(45deg);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* manage the bars in the bar graph*/
+.graph-content .rating {
+  width: 25px;
+  align-self: flex-end;
+}
+
+/* give each topic a unique colour */
+.rating.javascript-proficiency {
+  background-color: $orange;
+}
+.rating.html-css-proficiency {
+  background-color: $blue;
+}
+.rating.reactjs-proficiency {
+  background-color: $green;
+}
+.rating.jquery-proficiency {
+  background-color: $pink;
+}
+.rating.other-one-proficiency {
+  background-color: $darkgreen;
+}
+.rating.other-two-proficiency {
+  background-color: $aqua;
+}
+.rating.other-three-proficiency {
+  background-color: $purple;
+}
+.rating.other-four-proficiency {
+  background-color: $lilac;
+}
+
+/* graph heights */
+.rating.none {
+  height: 100%;
+  background-color: $white;
+}
+
+.rating.quarter {
+  height: 25%;
+}
+
+.rating.half {
+  height: 50%;
+}
+
+.rating.three-quarter {
+  height: 75%;
+}
+
+.rating.full {
+  height: 100%;
+}
+
+
+/* Tooltop Functionality */
+ /* Tooltip container */
+ .tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: $grey;
+  color: $white;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: $grey transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (min-width: 601px) {
+  .dev-skills-graphs .graph {
+    margin: 25px;
+  }
+}
