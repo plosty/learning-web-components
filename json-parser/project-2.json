@@ -1,0 +1,17 @@
+{
+  "name": "Phil",
+  "number": 2,
+  "male": true,
+  "female": false,
+  "array": [ 
+   {"test": "result"},
+   {"test": 2},
+   {"test": true}
+  ],
+  "object": {
+    "test": "string",
+    "test2": 2,
+    "test3": true,
+    "test4": false
+  }
+}

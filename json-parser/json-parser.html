@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <title>Project 2: JSON Parser</title>
+</head>
+<body>
+    <div class="container border border-success mt-3">
+      <h1 class="my-2">Project 2: JSON Parser</h1>
+      <div class="row border border-secondary m-1 mb-3 p-2">
+        <div class="form-group col">
+          <h4 class="my-2">Input Tab</h4>
+          <form id="parser">
+            <!-- Manual Input Box-->
+            <div class="form-group">
+              <label for="text-input">JSON Input:</label>
+              <textarea class="form-control" rows="20" id="text-input"></textarea>
+            </div>
+            <!-- File Uploader -->          
+            <div class="input-group mb-3">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="input-file" accept=".json, .txt">
+                <label class="custom-file-label" for="input-file">Choose a file (.txt or .json)</label>
+              </div>
+            </div>
+            <!-- Launch Parser Button -->
+            <div class="form-group">
+              <button id="process-button" class="btn btn-success btn-block">Parse JSON</button>
+            </div> 
+            <div class="form-group">
+              <button id="clear-button" class="btn btn-outline-danger btn-block">Clear</button>
+            </div> 
+          </form> 
+        </div>
+  
+        <div class="col">
+          <h4 class="my-2">Results Tab</h4>
+          <form id="parser">
+            <!-- Manual Input Box-->
+            <div class="form-group">
+              <label for="test-input">Parsed JSON:</label>
+              <textarea class="form-control" rows="20" id="text-output"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="text" id="result-field" class="form-control">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>                
+    <script src="json-parser.js"></script>  
+  </body>
+</html>

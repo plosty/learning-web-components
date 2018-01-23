@@ -66,4 +66,8 @@ This page shows web-components created while studying HTML/CSS/Javascript
 
 [Fantasy Football Page Code](https://github.com/plosty/learning-web-components/tree/master/fantasy-football-league/)
 
+### JSON Parser
 
+[JSON Parser Page](https://plosty.github.io/learning-web-components/json-parser/json-parser.html)
+
+[JSON Parser Page Code](https://github.com/plosty/learning-web-components/tree/master/json-parser/)
